@@ -1,0 +1,123 @@
+/**
+* Theme Name: 3CMS
+* Theme URI: http://http://inspiration-inspection.ml/3CMS#
+* Description: 3CMS# is a versatile and easy to customize WordPress theme, instantly giving a professional look to your online presence. Designed with visitor engagement in mind, it allows anyone to create a beautiful, fast and mobile friendly website compatible with all browsers and devices. Customizr works fine with major WordPress plugins like WooCommerce, bbPress, JetPack and many others. Top rated by hundreds and with an extremely active community of users and developers, the Customizr theme is a safe and reliable design option to publish your WordPress content.
+* Version: 1.0.0
+* Author: Hesham Hussain [adam adam]
+* Author URI: http://inspiration-inspection.ml/heshamhussaincurlicumvital
+* Tags: gray, white, light, blue, red, yellow, green, purple, orange, black, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-menu, custom-colors, featured-images, full-width-template, theme-options, threaded-comments, translation-ready, sticky-post, post-formats, rtl-language-support, editor-style
+* Text Domain: customizr
+* Copyright: (c) 2015 Hesham (adam), Giza, Egypt
+* License: GNU General Public License v2.0 or later
+* License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+/**
+* The styleheets of Customizr are located in inc/assets/css. Each skin has its own stylesheet : blue.css, green.css, ...
+* The current stylesheet is loaded after the main skin stylesheet.
+*
+* IMPORTANT : If you write your CSS code below, it will be deleted when you'll update the theme.
+* If you want to make quick style test / changes, consider using the Custom CSS section in appearance > customize > advanced options > Custom CSS, it will persist on update since it is saved in your database.
+* To make important CSS customizations, you'll want to use a child theme and add your css code in the style.css file of it.
+*/
+
+li,ul,a {margin:0;padding:0;}
+.sidebar ul ,.sidebar li ,.sidebar a  {padding:2px;margin:2px;list-style:none;color:#fff;}
+#searchsubmit ,#s {color:black;}
+.container {margin-top:40px;background-color:#a5F5ef;}
+footer {margin-top: 20px;}
+footer .col-lg-12 {padding:0;margin:0;}
+footer h5 {background-color: #222;color: #fff;margin: 0; padding-left: 50px;padding-top: 20px;padding-bottom: 20px;}
+/* Navbare Primary */
+.cms-menu    {}
+.cms-menu ul {margin:0;padding:0;animation-name: example;animation-duration: 2s;}
+.cms-menu li {list-style: none;margin:0;padding: 0;}/*1*/
+
+.cms-menu a {display: inline-block;margin: 0;padding: 10px 20px; text-decoration: none;box-shadow: 0px 5px 8px #222;}
+.cms-menu a:visited,.cms-menu a:link{font-size: 20px;}
+.cms-menu a:hover {font-size: 20px;color:beige;box-shadow: 0px 2px 4px #222;}
+
+.cms-menu-2 {}
+.cms-menu-2 ul {margin:0;padding:0;animation-name: example;animation-duration: 2s;}
+.cms-menu-2 li {list-style: none;margin:0;padding: 0;}/*1*/
+.cms-menu-2 a {width:120px;font-size: 14px;display:inline-block;margin: 0;padding: 10px 20px; text-decoration: none;box-shadow: 0px 5px 8px #222;}
+.cms-menu-2 a:visited,.cms-menu a:link{font-size: 15px;}
+.cms-menu-2 a:hover {color:beige;box-shadow: 0px 2px 4px #222;}
+
+@keyframes example {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+@media (min-width:700px){
+.cms-menu .menu-depth-0 {}
+.cms-menu .menu-depth-0 .menu-item-depth-0 {float:left;}/*2 display:inline-table*/
+.cms-menu .menu-depth-0 .menu-item-depth-0:hover .menu-depth-1 {display:block;position: absolute;z-index: 1;}
+
+.cms-menu .menu-depth-1 {display: none;}
+  
+.cms-menu .menu-depth-1 .menu-item-depth-1 {}
+.cms-menu .menu-depth-1 .menu-item-depth-1:hover .menu-depth-2 {width:100%;display:block;position: absolute;left:100px;top:5px;}
+
+.cms-menu-2 {display: none;}
+}
+@media (max-width:700px){
+
+.cms-menu {display: none;}
+.cms-menu-2 .menu-depth-0 {}
+.cms-menu-2 .menu-depth-0 .menu-item-depth-0 {position: relative;}/*2*/
+.cms-menu-2 .menu-depth-0 .menu-item-depth-0:hover .menu-depth-1 {position:absolute;display:block;top:0;left:70px;z-index:1;}
+
+.cms-menu-2 .menu-depth-1 {display: none; }
+.cms-menu-2 .menu-depth-1 .menu-item-depth-1 {}
+.cms-menu-2 .menu-depth-1 .menu-item-depth-1:hover .menu-depth-2 {}
+
+    .page { }    
+.smbtn {width:40px;}
+.smbtn ul{width:40px;box-shadow: 4px 4px 6px #222;}
+.smbtn li {background-color: black;color: white;list-style: none;width:40px;float: none;}
+.appear {display: none;}
+.smbtn:hover .appear {display:block;}
+}  
+
+
+
+
+
+.topnav ul {float: right;list-style:none;}
+.topnav ul li {float: left; background-color:#333;margin: 0; padding: 0; color: #fff;text-decoration: none;}
+.topnav ul li a {text-decoration: none; color: #fff;background-color:#333; padding: 5px 10px;}
+.topnav ul li a:hover {background-color: #555;}
+.blogname h1 {display: inline;}
+
+.blogname h1 a {text-decoration: none;/*color:#2288BD;*/text-shadow:2px 2px 4px #999;}
+.blogname h2 {margin:10px 50px;text-shadow:2px 2px 4px #999;}
+
+.blogname h2:before {content:"~ ";}
+.blogname h2:after {content:" ,,";}
+#sidebar {padding:10px 10px; background-color:#222;box-shadow: 0px 4px 8px;margin-top: 10px;}
+#sidebar .widget { border-bottom: 5px solid #fff;}
+
+.page .col-lg-9 {background-color:#fff;box-shadow: 0px 4px 8px;}
+.slideshow { position: relative;}
+#oneimg {position: absolute;width: 100%;}
+#img10 {width: 100%;height: 5px;margin:0;padding:0;}
+#img11 {width: 100%;height: 5px;margin:0;padding:0;}
+#img9 {position: relative;width: 100%;}
+/*#img1,#img2,#img3,#img4,#img5,#img6,#img7,#img9 {position: absolute;width: 100%;}
+#img8 {position: relative;width: 100%;} 
+*/
+.rect {border-bottom: 5px solid #333;border-top: 5px solid #333;padding-top: 10px;}
+.rect a {color: #2288bb;text-decoration:underline;}
+
+.menunav {float: left;}
+.menunav ul {margin-top: 60px; margin-bottom: 20px; }
+.menunav li {margin: 0;padding: 0; list-style: none;float: left;}
+.menunav a {margin: 0;padding: 5px 10px;text-decoration: none;box-shadow: 0px 5px 8px #222;}
+.menunav a:visited,.menunav a:link{color:#444;}
+.menunav a:hover {background-color:#666;color:beige;box-shadow: 0px 2px 4px #222;}
+
+.footer1widget {float:left;margin-left:20px;list-style:none;color:#aaa;padding:0 10px;border-right:px solid #fff;}
+.foot-1 .col-lg-12,.foot-1  .col-md-12 ,.foot-1 .col-sm-12,.foot-1  .col-xs-12{background-color:#222;border-bottom:2px solid #fff;}

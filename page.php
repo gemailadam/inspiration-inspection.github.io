@@ -60,7 +60,7 @@
 		<div class="row">
 			<!-- 2-1 ) page part -->
 			<div class="page">
-				<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-9 col-md-12 col-sm-12 col-xs-9">
 					
 					<?php
 					if(have_posts()) : 
@@ -72,7 +72,7 @@
 					echo '</a></h1>';
 					echo '<br/>';
 					echo '<br/>';
-					the_content();
+					the_content('<br/><p class="push_button">Read more </p>');
 					echo "</div>";
 					endwhile;
 					else :
@@ -86,8 +86,9 @@
 
 		    <!-- 2-2 ) sidebar part if you want -->
 			<div class="sidebar">
-				<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-3 col-md-12 col-sm-12 col-xs-3">
                 	<?php get_sidebar(); ?>
+                	<br/>
 				</div>
 			</div>
 
@@ -95,12 +96,13 @@
 		<!--End Row -->
 		</div>
 		<!--End main -->
-
+		<br>
 		<!-- 3 ) footer-->
 		<footer>
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<?php get_footer(); ?>
+					<br/>					
+					<?php get_footer(); ?>
 				</div>
 			</div>
 		</footer>
@@ -108,7 +110,13 @@
 	
 	</div>
 	<!-- End Container-->
-	<script type="text/javascript"></script>
+	<script>
+
+	$('.banner > img:gt(0)').hide();
+		setInterval(function() { 
+		  $('.banner > img:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('.banner');
+		},  1000);
+	</script>
 <?php wp_footer(); ?>	
 </body>
 </html>

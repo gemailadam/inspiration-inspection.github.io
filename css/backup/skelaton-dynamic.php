@@ -1,4 +1,4 @@
-.container ,.row {
+.container {
   /*padding-right: 15px;
   padding-left: 15px;*/
   margin-right: auto;
@@ -118,8 +118,8 @@ echo "}<br/><br/>";
 $calc=750;
 while ($calc>=298) {
 echo "@media (min-width:". ($calc-4) ."px ) and (max-width:".$calc."px  ) {<br/>";
-echo ".container { width:".($calc-8)."px; }<br/>";
-echo ".row { width:".($calc-4)."px; }<br/>";
+echo ".container { width:".($calc-4)."px; }<br/>";
+echo ".row { width:".$calc."px; }<br/>";
 echo ".col-sm-12 {width:". ($calc-4)*(100/100) ."px;}<br/>";
 echo ".col-sm-11 {width:". ($calc-4)*(91.66666667/100) ."px;}<br/>";
 echo ".col-sm-10 {width:". ($calc-4)*(83.33333333/100) ."px;}<br/>";
@@ -140,15 +140,15 @@ $calc = $calc-4;
 
 <br/>
 <br/>
-@media (min-width: 8px ) and (max-width:294px) { 
+@media (min-width: 8px ) and (max-width:298px) { 
 <br/>
-.container { width: 290px; } 
+.container { width: 298px; } 
 <br/>
-.row {width: 290px;}
+.row {width: 298px;}
 <br/>
 
 <?php 
-$calc=290;
+$calc=298;
 echo ".col-sm-12 {width:". $calc*(100/100) ."px;}<br/>";
 echo ".col-sm-11 {width:". $calc*(91.66666667/100) ."px;}<br/>";
 echo ".col-sm-10 {width:". $calc*(83.33333333/100) ."px;}<br/>";

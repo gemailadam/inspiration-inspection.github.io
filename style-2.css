@@ -74,50 +74,39 @@ img#shadow { width:90%;margin:10px 5%;position:relative;z-index: -10;}
 /*navbar Primary */
 .nav{margin: 0px 0 0 0;}
 .menu {
-	height:50px;width:90%;
+	/*height:50px;*/position: relative;
 	padding: 0px;margin: 0px auto ;
-	border-radius:3px 3px 30px 30px;border:solid 1px #ccc;
-	box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
+	
+	/*border-radius:3px 3px 30px 30px;border:solid 1px #ccc;
+	box-shadow: 0px 6px 0px #444,0px 20px 15px #111;*/
 
 	}
-
-.menu > ul {
-	background-color: #444;
-	border-radius:3px 3px 30px 30px;
-	height:50px;
-	padding: 0 30px;
-}
 .menu a:link ,.menu a:visited {
 	color: #fff;
 }
 .menu a:hover {	color: #aaa;}
 
 .menu a {
-	background-color: #444;
 	padding: 15px 15px;	
 }
+.menu > ul {
+	display: block;
+	background-color: #444;
+
+	padding: 0 30px;
+}
+
 .menu > ul > li {
-	height:50px;
-    float: left;
+	border-radius:3px 3px 30px 30px;border:solid 1px #ccc;
+	box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
+	height:30px;
+   float: left;
 	padding: 0px 0px;margin:15px 0;
 	text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
 }
-.menu > ul > li:nth-child(n+5)  {
-    border-radius:3px 3px 5px 30px;border:solid 1px #ccc;
-	box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
-	background-color: #444;
-   
-	padding: 0px 5px;margin:25px 0 ;
-	text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
+.menu > ul > li:hover {	background-color: #D94E3B;}
+.menu > ul > li:hover > a {	color: #fff;}
 
-}
-.menu > ul > li:nth-child(n+5) >a {
-   
-	background-color: #444;
-   
-	padding: 0px 15px;
-
-}
 .menu > ul > li li {
 	padding: 0px 0px;margin:50px 0;
 	text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
@@ -132,7 +121,7 @@ img#shadow { width:90%;margin:10px 5%;position:relative;z-index: -10;}
 	box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
   margin:15px 0 ;padding: 0px 0px;
 }
-.menu > ul > li:hover > ul {left:auto;}
+.menu > ul > li:hover > ul {left:auto;top:30px;}
 .menu > ul > li > ul > li > ul {position:absolute;left:-9999px;}
 
 .menu > ul > li > ul > li:hover { }

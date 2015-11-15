@@ -12,7 +12,7 @@ index.php
 
 <!-- Optional theme -->
 <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous"/-->
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skelaton-dynamic.css"/>
+<!--link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/elements.css"/-->
 <!--link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skelaton-static.css"/-->
 <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
 		
@@ -36,12 +36,14 @@ index.php
 <!-- from hh END -->
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
         <!--title><a href="<?php the_permalink(); ?>" title="<?php sprintf( __( 'Permanent Link to %s', 'theme-name' ), the_title_attribute( 'echo=0' ) ); ?>"><?php the_title(); ?></a></title-->
-        <title><?php the_title( '' , ' || ', 'left' );bloginfo('name' );?></title>
+        <title><?php the_permalink(); the_title( '' , ' || ', 'left' );bloginfo('name' );?></title>
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
         <!--?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?-->
 		<link rel="stylesheet"  type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" /> 
-		
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skelaton-dynamic.css"/>
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/elements.css"/>
+		<link rel='stylesheet' type='text/css' href="<?php bloginfo('template_directory')?>/css/style.php" />
         <?php wp_head(); ?>
 </head>
 <body <?php body_class( ); ?> >
@@ -63,8 +65,9 @@ index.php
 					
 					<?php
 					if(have_posts()) {
-					while ( have_posts() ) { the_post();
-					
+					while ( have_posts() ) { 
+
+					the_post();
 					echo '<div class="rect">';
 					echo '<h1><a href="';
 					the_permalink();	
@@ -77,11 +80,11 @@ index.php
 					echo '">  ';
 					the_author();
 					echo "</a> - ";
-					echo '<a href="';
+					/*echo '<a href="';
 					the_permalink();	
 					echo '">  ';
 					the_tags();
-					echo "</a> - ";
+					echo "</a> - ";*/
 					echo '<a href="';
 					the_permalink();	
 					echo '">  ';
@@ -89,7 +92,8 @@ index.php
 					echo '</a>';
 					echo '<br/>';
 					echo '<br/>';
-					the_content();
+					
+					the_content('<br/><p class="push_button">Read more </p>');
 					echo "</div>";
 					}
 					}else { echo "No Content Found , or there is nothing posted By you yet";}					            
@@ -103,6 +107,7 @@ index.php
 			<div class="sidebar">
 				<div class=" col-xs-3 col-lg-3 col-md-12 col-sm-12 ">
                 	<?php get_sidebar(); ?>
+                	<br/>
 				</div>
 			</div>
 
@@ -110,12 +115,13 @@ index.php
 		<!--End Row -->
 		</div>
 		<!--End main -->
-
+		<br>
 		<!-- 3 ) footer-->
 		<footer>
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<?php get_footer(); ?>
+					<br/>
+					<?php get_footer(); ?>
 				</div>
 			</div>
 		</footer>
@@ -123,7 +129,13 @@ index.php
 	
 	</div>
 	<!-- End Container-->
-	<script type="text/javascript"></script>
+	<script>
+
+	$('.banner > img:gt(0)').hide();
+		setInterval(function() { 
+		  $('.banner > img:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('.banner');
+		},  1000);
+	</script>
 <?php wp_footer(); ?>	
 </body>
 </html>

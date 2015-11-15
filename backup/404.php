@@ -1,12 +1,9 @@
 <?php 
-/* single.php
-*
-* for showing the post at seperate page
-*
-* The single post template. Used when a single post
-* is queried. For this and all other query templates, 
-* index.php is used if the query template is not present. 
-*/ ?>
+/*
+404.php
+The 404 Not Found template. Used when WordPress cannot find a post or page that matches the query. 
+*/
+?>
 
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -50,7 +47,12 @@
 </head>
 <body <?php body_class( ); ?> >
 <div class="container">
-
+<div class="oops">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1 style="color:#2288BD;box-shadow:2px 2px 4px #999;text-shadow:2px 2px 4px #999;">Oops The Page You Request Is not Found , You have been redirected To Home Page</h1> 
+        </div>
+    </div>
 	<!-- 1) header-->
 	<header>
 		<div class="row">
@@ -63,42 +65,25 @@
 		<div class="row">
 			<!-- 2-1 ) page part -->
 			<div class="page">
-				<div class="col-lg-9 col-md-12 col-sm-12 col-xs-9">
-
-					<?php
-					if(have_posts()) : 
-					while ( have_posts() ) : the_post();
+				<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
 					
-					echo '<div class="rect">';
-					echo '<h1><a>';
-					the_title();
-					echo '</a></h1>';
-					echo '<br/>';
-					echo '<br/>';
-					the_content('<br/>Read more >>');
-					echo "</div>";
-					endwhile;
-					else :
-					 echo "No Content Found , or there is nothing Page By you yet";
-					endif;				            
-					?>	
-					<span class="">
-					<?php previous_post_link(); ?>
-					</span>
 
-					<span class="fl-ri">
+<h1 style="color:#2288BD;"><u>HOME</u></h1>
+
+
+<h1>Under Construction</h1>
+
+<p>Under Construction , Under Construction , Under Construction Under Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under Construction
+</p>
 					
-					<?php next_post_link(); ?>
-					</span>  
 
 				</div>
 		    </div>
-
+            
 		    <!-- 2-2 ) sidebar part if you want -->
-			<div class="sidebar">
-				<div class="col-lg-3 col-md-12 col-sm-12 col-xs-3">
+			<div class="sidrbar">
+				<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                 	<?php get_sidebar(); ?>
-                	<br/>
 				</div>
 			</div>
 
@@ -106,13 +91,12 @@
 		<!--End Row -->
 		</div>
 		<!--End main -->
-        <br>
+
 		<!-- 3 ) footer-->
 		<footer>
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<br/>
-					<?php get_footer(); ?>
+						<?php get_footer(); ?>
 				</div>
 			</div>
 		</footer>
@@ -120,13 +104,7 @@
 	
 	</div>
 	<!-- End Container-->
-	<script>
-
-	$('.banner > img:gt(0)').hide();
-		setInterval(function() { 
-		  $('.banner > img:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('.banner');
-		},  1000);
-	</script>
+	<script type="text/javascript"></script>
 <?php wp_footer(); ?>	
 </body>
-</html>     
+</html>

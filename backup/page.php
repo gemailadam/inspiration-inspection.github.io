@@ -1,12 +1,9 @@
 <?php 
-/* single.php
-*
-* for showing the post at seperate page
-*
-* The single post template. Used when a single post
-* is queried. For this and all other query templates, 
-* index.php is used if the query template is not present. 
-*/ ?>
+/*page.php
+   The page template. 
+   Used when an individual Page is queried. 
+*/
+ ?>
 
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -63,8 +60,8 @@
 		<div class="row">
 			<!-- 2-1 ) page part -->
 			<div class="page">
-				<div class="col-lg-9 col-md-12 col-sm-12 col-xs-9">
-
+				<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+					
 					<?php
 					if(have_posts()) : 
 					while ( have_posts() ) : the_post();
@@ -75,30 +72,22 @@
 					echo '</a></h1>';
 					echo '<br/>';
 					echo '<br/>';
-					the_content('<br/>Read more >>');
+					the_content();
 					echo "</div>";
 					endwhile;
 					else :
 					 echo "No Content Found , or there is nothing Page By you yet";
 					endif;				            
 					?>	
-					<span class="">
-					<?php previous_post_link(); ?>
-					</span>
-
-					<span class="fl-ri">
 					
-					<?php next_post_link(); ?>
-					</span>  
 
 				</div>
 		    </div>
 
 		    <!-- 2-2 ) sidebar part if you want -->
 			<div class="sidebar">
-				<div class="col-lg-3 col-md-12 col-sm-12 col-xs-3">
+				<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                 	<?php get_sidebar(); ?>
-                	<br/>
 				</div>
 			</div>
 
@@ -106,13 +95,12 @@
 		<!--End Row -->
 		</div>
 		<!--End main -->
-        <br>
+
 		<!-- 3 ) footer-->
 		<footer>
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<br/>
-					<?php get_footer(); ?>
+						<?php get_footer(); ?>
 				</div>
 			</div>
 		</footer>
@@ -120,13 +108,7 @@
 	
 	</div>
 	<!-- End Container-->
-	<script>
-
-	$('.banner > img:gt(0)').hide();
-		setInterval(function() { 
-		  $('.banner > img:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('.banner');
-		},  1000);
-	</script>
+	<script type="text/javascript"></script>
 <?php wp_footer(); ?>	
 </body>
-</html>     
+</html>

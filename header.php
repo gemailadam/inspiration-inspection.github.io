@@ -1,8 +1,12 @@
 <section class="site-title" >
+<img id="logo" width="10%" style="float:right;margin-right:10px;" src="<?php bloginfo('template_directory'); ?>/images/logo.png ?>" alt="">
+
 	<?php echo '<p><a href="'; the_permalink();echo '">'; bloginfo('title');echo '</a></p><br/>'; ?>
 	<?php echo '<a href="'; the_permalink();echo '">'; bloginfo('description');echo '</a>'; ?>
+
 </section>
 <br/>
+
 <section class="banner" >
 
 <img src="<?php bloginfo('template_directory'); ?>/images/09.jpg ?>" alt="">	

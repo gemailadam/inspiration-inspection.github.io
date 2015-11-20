@@ -4,21 +4,10 @@ index.php
     The main template. If your Theme provides its own templates, index.php must be present. 
 */
  ?>
-<?php/*
-header("Content-type:application/pdf");
 
-// It will be called downloaded.pdf
-header("Content-Disposition:attachment;filename=downloaded.pdf");
-
-// The PDF source is in original.pdf
-readfile("original.pdf");
-*/?>
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
 <head>
 	<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
 	<!--script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/themes/ui-darkness/jquery-ui.css"></script-->
-
 
 
 	<meta name="viewport" content="width=device-width,initial-scale=1"><!--mobil first media query to work at mobile good -->
@@ -30,10 +19,6 @@ readfile("original.pdf");
 	<![endif]-->
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-        
-    <title><?php the_permalink(); the_title( '' , ' || ', 'left' );bloginfo('name' );?></title>
-    <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="stylesheet"  type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" /> 
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skelaton-dynamic.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/elements.css"/>
@@ -125,34 +110,6 @@ readfile("original.pdf");
 		setInterval(function() { 
 		  $('.banner > img:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('.banner');
 		},  1000);
-
-$(window).on('scroll', function()
-{
-  stop = Math.round($(window).scrollTop());
-    if (stop > 540)
-    {
-      $('nav').addClass('navbar-fixed-top');
-      
-    }
-    if(stop<540)
-    {
-    $('nav').removeClass('navbar-fixed-top');	
-    }
-}
-);
-// 	$(document).ready(function() {
-//   var navpos = $('.menu>ul').offset();
-//   console.log(navpos.top);
-//     $(window).bind('scroll', function() {
-//       if ($(window).scrollTop() > navpos.top) {
-//         $('.menu>ul').addClass('fixed');
-//        }
-//        else {
-//          $('.menu>ul').removeClass('fixed');
-//        }
-//     });
-// });	
 	</script>
 <?php wp_footer(); ?>	
 </body>
-</html>

@@ -1,56 +1,229 @@
 <?php 
 /* Template for customize
 function customize_theme($wp_customize){
-	$section = array('title' =>'' ,'description' => '','priority' => '' );
-    $wp_customize->add_section($id,$section);
-    $settings= array('default' => '' );
-    $wp_customize->add_settings($id,$settings);
-    $control= array('label' => '','section' => '','settings' => '' );
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'',$control));
+    $id_section ='';    
+    $section = array(
+        'title' =>__( 'Put Visible Section Name', 'Put your theme name' ) ,
+        'description' => '',
+        'priority' => '' );
+    $wp_customize->add_section($id_section,$section);
+
+    $id_settings ='';       
+    $settings= array('default' => '', );
+    $wp_customize->add_setting($id_settings,$settings);
+
+    $id_control =$id_settings ;            
+    $control= array(
+        'label' => __( 'Put Visible label Name', 'Put your theme name' ),
+        'section' => $id_section ,
+        'settings' => $id_settings );
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,$id_control,$control));
 }
+
 */
-
-function customize_theme($wp_customize){
-	$section = array('title' =>'' ,'description' => '','priority' => '' );
-    $wp_customize->add_section('',$section);
-    $settings= array('default' => , );
-    $wp_customize->add_settings('',$settings);
-    $control= array('label' => '','section' => '','settings' => '' );
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'',$control));
-}
-
+/* add action or add filter method [wordpress function]
 $tag=;
 $function_to_add=;
 $priority=;
 $accepted_args=;
 add_action($tag, $function_to_add, $priority, $accepted_args );
+*/
+
+function customize_theme($wp_customize){
+
+    $wp_customize->add_section('Section_BG_CLR_ID',array(
+        'title' =>'Background CLR' ,
+        'description' => 'hesham description here',
+        'priority' => '1' ));
+
+    $wp_customize->add_setting('Background_COLOR_Settings_ID',array('default' => '#222' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'Background_COLOR_Settings_ID',array(
+        'label' =>'Bg COLOR',
+        'section' => 'Section_BG_CLR_ID' ,
+        'settings' => 'Background_COLOR_Settings_ID' )));
+
+//HTML font color
+    $wp_customize->add_section('Section_CLR_ID',array(
+        'title' =>'CLR' ,
+        'description' => 'hesham description here',
+        'priority' => '2' ));
+
+    $wp_customize->add_setting('HTML_COLOR_Settings_ID',array('default' => '#fff' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'HTML_COLOR_Settings_ID',array(
+        'label' =>'Pragraphs COLOR',
+        'section' => 'Section_CLR_ID' ,
+        'settings' => 'HTML_COLOR_Settings_ID' )));
+// a link color
+
+    $wp_customize->add_setting('a_link_color_id',array('default' => '#fff' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_link_color_id',array(
+        'label' =>'linls colors',
+        'section' => 'Section_CLR_ID' ,
+        'settings' => 'a_link_color_id' )));
+
+// a visited color
+
+    $wp_customize->add_setting('a_visited_color_id',array('default' => '#aaa' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_visited_color_id',array(
+        'label' =>'Visited Links Colors',
+        'section' => 'Section_CLR_ID' ,
+        'settings' => 'a_visited_color_id' )));
+
+
+// a Hover color
+
+    $wp_customize->add_setting('a_hover_color_id',array('default' => '#999' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_hover_color_id',array(
+        'label' =>'Hover Links Colors',
+        'section' => 'Section_CLR_ID' ,
+        'settings' => 'a_hover_color_id' )));
+
+$wp_customize->add_section('TesT_ID',array('title'=>'TEST'));
+$wp_customize->add_setting('powered_by',array('default' => 'gray',));
+$nbn='gray';
+if($nbn=$bnb){
+    $fbf='#777'; 
+} 
+$bnb=$wp_customize->add_control('powered_by',array(
+        'type' => 'select',
+        'label' => 'This site is powered by:',
+        'section' => 'TesT_ID',
+        'choices' => array(
+            'blue' => 'BLUE',
+            'red' => 'RED',
+            'green' => 'GREEN',
+            'gray' => 'GRaY',
+            'blackwhite' => 'BLACKWHITE',
+            'whiteblack' => 'WHITEBLACK',
+        ),
+    )
+);
+
+// section Best Customize
+
+// http://themefoundation.com/wordpress-theme-customizer/
+
+/*
+<?php
+    $example_position = get_theme_mod( 'logo_placement' );
+    if( $example_position != '' ) {
+        switch ( $example_position ) {
+            case 'left':
+                // Do nothing. The theme already aligns the logo to the left
+                break;
+            case 'right':
+                echo '<style type="text/css">';
+                echo '#header #logo{ float: right; }';
+                echo '</style>';
+                break;
+            case 'center':
+                echo '<style type="text/css">';
+                echo '#header{ text-align: center; }';
+                echo '#header #logo{ float: none; margin-left: auto; margin-right: auto; }';
+                echo '</style>';
+                break;
+        }
+    }
+?>
+*/
+/*
+    $wp_customize->add_setting('color_schema_id');
+
+    $wp_customize->add_control('color_schema_id',array(
+        'label' =>'Choose Colors Schema',
+        'section' => 'Section_CLR_ID' ,
+        'type' =>'select',
+        'choices'=> threeDaVinci_colors_choices() ));
+*/
+
+/*
+$wp_customize->add_setting(
+    'powered_by',
+    array(
+        'default' => 'gray',
+    )
+);
+ 
+$wp_customize->add_control(
+    'powered_by',
+    array(
+        'type' => 'select',
+        'label' => 'This site is powered by:',
+        'section' => 'example_section_one',
+        'choices' => array(
+            'blue' => 'BLUE',
+            'red' => 'RED',
+            'green' => 'GREEN',
+            'gray' => 'GRaY',
+            'blackwhite' => 'BLACKWHITE',
+            'whiteblack' => 'WHITEBLACK',
+        ),
+    )
+);
+*/
+
+
+
+// http://stackoverflow.com/questions/17139501/using-post-to-get-select-option-value-from-html
+/* select post to php value
+$selectOption = $_POST['taskOption'];
+
+
+<select name="taskOption">
+  <option value="1">First</option>
+  <option value="2">Second</option>
+  <option value="3">Third</option>
+</select>
+*/
+
+
+// http://www.formget.com/php-select-option-and-php-radio-button/http://www.formget.com/php-select-option-and-php-radio-button/
+
+
+}
+
+add_action('customize_register','customize_theme');
+
+
+
+function threeDaVinci_colors_choices(){
+
+echo '<select name="" id="">';
+    echo '<option value="blue">Blue</option>';
+    echo '<option value="red">Blue</option>';
+echo '</select>';
+}
 
 function css_customizer(){
 
-
-
 ?>
 
+
 <style type="text/css">
-body{}
-.container{}
-.row {}
-	
+html {
+  color:<?php echo get_theme_mod('HTML_COLOR_Settings_ID'); ?>;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+  color:<?php echo '#777'; ?>;    
+}
+body {background-color:<?php echo get_theme_mod('HTML_COLOR_Settings_ID'); ?>;}
+a:link {color: <?php echo get_theme_mod('a_link_color_id'); ?>;}
+a:visited {color: <?php echo get_theme_mod('a_visited_color_id'); ?>;}
+a:hover {color: <?php echo get_theme_mod('a_hover_color_id'); ?>;}
+
+
 </style>
 
 <?php
 }
+add_action('wp_head','css_customizer' );
 
-$tag=;
-$function_to_add=;
-$priority=;
-$accepted_args=;
-add_action($tag, $function_to_add, $priority, $accepted_args );
-
-?>
-
-
- <?php 
+/*
 
 function theme_customizer_register($wp_customize){
 $wp_customize->add_section('3cms_colors',array(
@@ -160,4 +333,5 @@ body { background-color: #<?php echo get_theme_mod('background_color'); ?>; }
 <?php 
 }
 add_action('wp_head','css_customizer' );
+*/
  ?>

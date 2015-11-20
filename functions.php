@@ -73,9 +73,15 @@ require_once('includes/alternate-category-metabox.php');  // http://wordpress.st
 require_once('includes/remove-status.php');  // http://lists.automattic.com/pipermail/wp-hackers/2010-August/034384.html
 require_once('includes/301-redirects.php');  // http://wordpress.stackexchange.com/questions/1027/removing-the-your-backup-folder-might-be-visible-to-the-public-message-generate
 
-require_once('src/style.php');
 require_once('src/nav.php');
 */
+
+
+//////////////////////////////////////////////////////////////////////////////////
+///////////////// theme customize style change function  /////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+require_once('src/style.php');
+require_once('src/layout.php');
 ?>
 
  <?php 
@@ -218,9 +224,9 @@ function codex_book_init() {
     register_post_type( 'book', $args );
 }
 */
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+//////////part 2 Example from wordpress.org for register_post_type //////////
+///////////////////////////////////////////////////////////////////////
 //register new post menu to admin
 
 //sub2 essential args_post
@@ -303,5 +309,6 @@ echo '<label for=""> Name:</label> <input type="text">';
 echo '<label for="">Password:</label> <input type="text">';
 
 }
+
 
 ?>

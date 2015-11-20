@@ -17,7 +17,7 @@
 <img id="shadow" src="<?php bloginfo('template_directory'); ?>/images/shadow.png ?>" alt="">
 <br/>
 <section class="nav" >
-	<nav><?php wp_nav_menu(array('theme_location'=>'Primary') ); ?></nav>
+	<nav ><?php wp_nav_menu(array('theme_location'=>'Primary') ); ?></nav>
 </section>
 <br/>
 <br/>

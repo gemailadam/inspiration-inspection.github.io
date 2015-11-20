@@ -4,16 +4,21 @@
    Used when an individual Page is queried. 
 */
    ?>
-
+<?php/*
+// Date in the past
+header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+header("Cache-Control: no-cache");
+header("Pragma: no-cache");
+*/?>
    <!DOCTYPE html>
    <html <?php language_attributes(); ?>>
    <head>
    	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skelaton-dynamic.css"/>
    	<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
-   	
+
    	<!--script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/themes/ui-darkness/jquery-ui.css"></script-->
 
-   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>	
+   	<!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script-->	
 
    	
    	<meta name="viewport" content="width=device-width,initial-scale=1"><!--mobil first media query to work at mobile good -->
@@ -29,8 +34,11 @@
 	<title><?php the_title( '' , ' || ', 'left' );bloginfo('name' );?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<link rel="stylesheet"  type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" /> 
-	
+<link rel="stylesheet"  type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" /> 
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skelaton-dynamic.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/elements.css"/>
+	<link rel='stylesheet' type='text/css' href="<?php bloginfo('template_directory')?>/css/style.php" />
+
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class( ); ?> >
@@ -99,11 +107,27 @@
 		</div>
 		<!-- End Container-->
 		<script>
+	$('.banner > img:gt(0)').hide();
+		setInterval(function() { 
+		  $('.banner > img:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('.banner');
+		},  1000);
 
-			$('.banner > img:gt(0)').hide();
-			setInterval(function() { 
-				$('.banner > img:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('.banner');
-			},  1000);
+$(document).ready(function(){
+$(window).on('scroll', function()
+{
+  stop = Math.round($(window).scrollTop());
+    if (stop > 540)
+    {
+      $('nav').addClass('navbar-fixed-top');
+      
+    }
+    if(stop<540)
+    {
+    $('nav').removeClass('navbar-fixed-top');	
+    }
+}
+);
+});
 		</script>
 		<?php wp_footer(); ?>	
 	</body>

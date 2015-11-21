@@ -162,9 +162,7 @@ function start_lvl( &$output, $depth = 0, $args = array() ) {
 
 
 */
-?>
 
-<?php 
 
 function change_admin_icon($args){
 $args['menu_icon'] = 'dashicons-format-aside';
@@ -173,9 +171,8 @@ return $args;
 $tag='dwwp_post_type_args';
 $function_to_add='change_admin_icon';
 add_filter( $tag, $function_to_add );
-?>
 
-<?php 
+ 
 ///////////////////////////////////////////////////////////////////////
 ////////// Example from wordpress.org for register_post_type //////////
 ///////////////////////////////////////////////////////////////////////

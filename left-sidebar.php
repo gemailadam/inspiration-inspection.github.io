@@ -1,18 +1,9 @@
-<?php 
+<?php
 /*
-index.php
-    The main template. If your Theme provides its own templates, index.php must be present. 
-*/
- ?>
-<?php/*
-header("Content-type:application/pdf");
-
-// It will be called downloaded.pdf
-header("Content-Disposition:attachment;filename=downloaded.pdf");
-
-// The PDF source is in original.pdf
-readfile("original.pdf");
-*/?>
+ * Template Name: Left Sidebar
+ * Description: Page template without sidebar
+ */
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -54,6 +45,16 @@ readfile("original.pdf");
 		<!-- 2 ) main -->
 		<div class="main">
 		<div class="row">
+			
+		    <!-- 2-2 ) left sidebar  -->
+			<div class="sidebar">
+				<div class=" col-xs-3 col-lg-3 col-md-12 col-sm-12 ">
+                	<?php get_sidebar(); ?>
+                	<br/>
+				</div>
+			</div>
+			<!-- end sidebar part -->
+
 			<!-- 2-1 ) page part -->
 			<div class="page">
 				<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 ">
@@ -70,44 +71,29 @@ readfile("original.pdf");
 					the_title();
 					echo '</a></h1>';
 					echo '<br/>';
-					
+					echo '<a href="';
+					the_permalink();	
+					echo '">  ';
+					the_author();
+					echo "</a> - ";
+					echo '<a href="';
+					the_permalink();	
+					echo '">  ';
+					the_date();
+					echo '</a>';
+					echo '<br/>';
 					echo '<br/>';
 					
 					the_content('<br/><p class="push_button">Read more </p>');
-					echo '</div>';
-					echo '<div class="postedby">';
-					echo '<a href="';
-					the_author_link();
-					echo '">';
-					the_author();
-					echo "</a>";
-					echo '<a href="';
-					the_permalink();	
-					echo '">';
-					the_date('F Y');
-					echo '</a>';
-					
-					the_category();
-					
-					echo '<br/>';
-					echo '</div>';
-
+					echo "</div>";
 					}
 					}else { echo "No Content Found , or there is nothing posted By you yet";}					            
 					?>	
-										
+					
 
 				</div>
 		    </div>
-
-                	<?php /*get_template_part('comments');*/?>
-		    <!-- 2-2 ) sidebar part if you want -->
-			<div class="sidebar">
-				<div class=" col-xs-3 col-lg-3 col-md-12 col-sm-12 ">
-                	<?php get_sidebar(); ?>
-                	<br/>
-				</div>
-			</div>
+			<!-- end page part -->            
 
 		</div>
 		<!--End Row -->

@@ -70,11 +70,31 @@ header("Pragma: no-cache");
 							echo '<br/>';
 							the_content('<br/>Read more >>');
 							echo "</div>";
+							echo '<div class="postedby">';
+							echo '<a href="';
+							the_author_link();
+							echo '">  ';
+							the_author();
+							echo '</a>';
+							echo '<a href="';
+							the_permalink();	
+							echo '">  ';
+							the_date('F Y');
+							echo '</a>';
+
+							the_category();
+							echo '<br/>';
+
+							echo '</div>';
+
+
 							endwhile;
 							else :
 								echo "No Content Found , or there is nothing Page By you yet";
-							endif;				            
+							endif;
+
 							?>	
+
 							<span class="">
 								<?php previous_post_link(); ?>
 							</span>
@@ -83,6 +103,8 @@ header("Pragma: no-cache");
 								
 								<?php next_post_link(); ?>
 							</span>  
+
+			<?php comment_form(); ?>
 
 						</div>
 					</div>
@@ -115,25 +137,25 @@ header("Pragma: no-cache");
 		<!-- End Container-->
 		<script>
 
-	$('.banner > img:gt(0)').hide();
-		setInterval(function() { 
-		  $('.banner > img:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('.banner');
-		},  1000);
+			$('.banner > img:gt(0)').hide();
+			setInterval(function() { 
+				$('.banner > img:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('.banner');
+			},  1000);
 
-$(window).on('scroll', function()
-{
-  stop = Math.round($(window).scrollTop());
-    if (stop > 540)
-    {
-      $('nav').addClass('navbar-fixed-top');
-      
-    }
-    if(stop<540)
-    {
-    $('nav').removeClass('navbar-fixed-top');	
-    }
-}
-);
+			$(window).on('scroll', function()
+			{
+				stop = Math.round($(window).scrollTop());
+				if (stop > 540)
+				{
+					$('nav').addClass('navbar-fixed-top');
+
+				}
+				if(stop<540)
+				{
+					$('nav').removeClass('navbar-fixed-top');	
+				}
+			}
+			);
 		</script>
 		<?php wp_footer(); ?>	
 	</body>

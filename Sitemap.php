@@ -1,18 +1,8 @@
 <?php 
 /*
-index.php
-    The main template. If your Theme provides its own templates, index.php must be present. 
+Template Name:sitemap
 */
- ?>
-<?php/*
-header("Content-type:application/pdf");
-
-// It will be called downloaded.pdf
-header("Content-Disposition:attachment;filename=downloaded.pdf");
-
-// The PDF source is in original.pdf
-readfile("original.pdf");
-*/?>
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

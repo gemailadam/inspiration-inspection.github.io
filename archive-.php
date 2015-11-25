@@ -59,7 +59,17 @@ readfile("original.pdf");
 				<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 ">
 					
 					<?php
+					echo '<div class="archive">';
 					if(have_posts()) {
+						if (is_category()) {
+							echo "Category : ";single_cat_title( );echo " archaive";
+						}elseif (is_author( )) {
+							echo "author archaive : ";get_the_author( );
+						}elseif (is_month()) {
+							echo "monthely archive : ";get_the_date('F M');
+						}
+					echo '</div>';
+
 					while ( have_posts() ) { 
 
 					the_post();
@@ -70,33 +80,31 @@ readfile("original.pdf");
 					the_title();
 					echo '</a></h1>';
 					echo '<br/>';
-					
 					echo '<br/>';
 					
 					the_content('<br/><p class="push_button">Read more </p>');
-					echo '</div>';
+					echo "</div>";
 					echo '<div class="postedby">';
 					echo '<a href="';
 					the_author_link();
-					echo '">';
+					echo '">  ';
 					the_author();
-					echo "</a>";
+					echo '</a>';
 					echo '<a href="';
 					the_permalink();	
-					echo '">';
+					echo '">  ';
 					the_date('F Y');
 					echo '</a>';
 					
 					the_category();
-					
 					echo '<br/>';
+
 					echo '</div>';
 
 					}
 					}else { echo "No Content Found , or there is nothing posted By you yet";}					            
 					?>	
-										
-
+							
 				</div>
 		    </div>
 

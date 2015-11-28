@@ -2,6 +2,9 @@
 require_once('src/style.php');
 require_once('src/layout.php');
 require_once('src/addbar.php');
+require_once('src/test.php');
+require_once('src/class_customizer_js.php');
+require_once('src/admin_style.php');
 
 
 

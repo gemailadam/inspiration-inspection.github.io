@@ -46,58 +46,15 @@ Template Name:sitemap
 		<div class="row">
 			<!-- 2-1 ) page part -->
 			<div class="page">
-				<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 ">
-					
-					<?php
-					if(have_posts()) {
-					while ( have_posts() ) { 
-
-					the_post();
-					echo '<div class="rect">';
-					echo '<h1><a href="';
-					the_permalink();	
-					echo'">  ';
-					the_title();
-					echo '</a></h1>';
-					echo '<br/>';
-					
-					echo '<br/>';
-					
-					the_content('<br/><p class="push_button">Read more </p>');
-					echo '</div>';
-					echo '<div class="postedby">';
-					echo '<a href="';
-					the_author_link();
-					echo '">';
-					the_author();
-					echo "</a>";
-					echo '<a href="';
-					the_permalink();	
-					echo '">';
-					the_date('F Y');
-					echo '</a>';
-					
-					the_category();
-					
-					echo '<br/>';
-					echo '</div>';
-
-					}
-					}else { echo "No Content Found , or there is nothing posted By you yet";}					            
-					?>	
-										
-
+				<div class=" col-xs-12 col-lg-12 col-md-12 col-sm-12 ">
+				<!--img width="100%" src="<?php bloginfo('template_directory'); ?>/images/egypt1.jpg" alt="">
+				<img width="100%" src="<?php bloginfo('template_directory'); ?>/images/egypt2.jpg" alt="">
+				<img width="100%" src="<?php bloginfo('template_directory'); ?>/images/egypt3.jpg" alt=""-->
+				<img width="110%" style="margin-left:-50px;" src="<?php bloginfo('template_directory'); ?>/images/egyptfull.jpg" alt="">
+						
+				<iframe src="https://www.google.com/maps/d/embed?mid=zvP4vccIyHic.kwFmYMSEnOAo&hl=en_US" width="640" height="480"></iframe>
 				</div>
 		    </div>
-
-                	<?php /*get_template_part('comments');*/?>
-		    <!-- 2-2 ) sidebar part if you want -->
-			<div class="sidebar">
-				<div class=" col-xs-3 col-lg-3 col-md-12 col-sm-12 ">
-                	<?php get_sidebar(); ?>
-                	<br/>
-				</div>
-			</div>
 
 		</div>
 		<!--End Row -->
@@ -117,40 +74,7 @@ Template Name:sitemap
 	
 	</div>
 	<!-- End Container-->
-	<script>
+	<?php get_template_part('script'); ?>
 
-	$('.banner > img:gt(0)').hide();
-		setInterval(function() { 
-		  $('.banner > img:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('.banner');
-		},  1000);
-
-$(window).on('scroll', function()
-{
-  stop = Math.round($(window).scrollTop());
-    if (stop > 540)
-    {
-      $('nav').addClass('navbar-fixed-top');
-      
-    }
-    if(stop<540)
-    {
-    $('nav').removeClass('navbar-fixed-top');	
-    }
-}
-);
-// 	$(document).ready(function() {
-//   var navpos = $('.menu>ul').offset();
-//   console.log(navpos.top);
-//     $(window).bind('scroll', function() {
-//       if ($(window).scrollTop() > navpos.top) {
-//         $('.menu>ul').addClass('fixed');
-//        }
-//        else {
-//          $('.menu>ul').removeClass('fixed');
-//        }
-//     });
-// });	
-	</script>
-<?php wp_footer(); ?>	
 </body>
 </html>

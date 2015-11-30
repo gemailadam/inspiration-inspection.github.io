@@ -184,7 +184,7 @@ function css_customizer(){
 
 <style type="text/css">
 html {
-  color:<?php echo get_theme_mod('HTML_COLOR_Settings_ID'); ?>;
+  color:<?php echo get_theme_mod('HTML_COLOR_Settings_ID','#fff'); ?>;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
  
@@ -201,10 +201,10 @@ body {
 
 }
 
-a {color: <?php echo get_theme_mod('a_color_id'); ?>;}
-a:link {color: <?php echo get_theme_mod('a_link_color_id'); ?>;}
+a {color: <?php echo get_theme_mod('a_color_id','#fff'); ?>;}
+a:link {color: <?php echo get_theme_mod('a_link_color_id','#fff'); ?>;}
 a:visited {color:<?php echo get_theme_mod('a_visited_color_id','#aaa'); ?>;}
-a:hover {color: <?php echo get_theme_mod('a_hover_color_id'); ?>;}
+a:hover {color: <?php echo get_theme_mod('a_hover_color_id','#999'); ?>;}
 
 
 ul,li {list-style: none;padding: 0;margin: 0;}

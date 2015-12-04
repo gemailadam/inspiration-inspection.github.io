@@ -12,7 +12,7 @@ Template Name:sitemap
 
 
 	<meta name="viewport" content="width=device-width,initial-scale=1"><!--mobil first media query to work at mobile good -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" ><!--for bootstrap to work good at IE-->
+	<meta http-equiv="x-UA-Compatible" content="IE=edge" ><!--for bootstrap to work good at IE-->
 	
 	<!-- IE 9 use different method than IE 7 & 8 to start good -->		
 	<!--[if it ie 9]>
@@ -21,7 +21,7 @@ Template Name:sitemap
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
         
-    <title><?php the_permalink(); the_title( '' , ' || ', 'left' );bloginfo('name' );?></title>
+    <title><?php the_permalink(); the_title( '' , ' xx ', 'left' );bloginfo('name' );?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="stylesheet"  type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" /> 
@@ -46,63 +46,171 @@ Template Name:sitemap
 		<div class="row">
 			<!-- 2-1 ) page part -->
 			<div class="page">
-				<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 ">
-					
-					<?php
-					if(have_posts()) {
-					while ( have_posts() ) { 
+				<div class=" col-xs-12 col-lg-12 col-md-12 col-sm-12 relative">
+				<!--img width="100%" src="<?php bloginfo('template_directory'); ?>/images/egypt1.jpg" alt="">
+				<img width="100%" src="<?php bloginfo('template_directory'); ?>/images/egypt2.jpg" alt="">
+				<img width="100%" src="<?php bloginfo('template_directory'); ?>/images/egypt3.jpg" alt=""-->
+				<div class="wrapper">
+					<img class="sitemap"  src="<?php bloginfo('template_directory'); ?>/images/egyptfull.jpg" alt="">
+					<div class="maplinks">
+						<table>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td><img class="arrow" src="<?php bloginfo('template_directory'); ?>/images/arow.gif" alt=""></td><td></td></tr>
+							<tr class="row-xs-1a row-lg-1a row-md-1a row-sm-1a"><td></td><td></td><td></td><td class="tabs"><a href="http://inspirati.byethost7.com/">HOME</a></td><td>abab</td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td class="description"><p> the front main start page , providing description on bref about the porpose of this website , providing links to important and recent portfolio , articles and pages .</p></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1 cut"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1 cut"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td></td><td><img class="arrow" src="<?php bloginfo('template_directory'); ?>/images/arow.gif" alt=""></td></tr>
+							<tr class="row-xs-1a row-lg-1a row-md-1a row-sm-1a"><td></td><td></td><td></td><td></td><td class="tabs"><a href="http://inspirati.byethost7.com/about/">about</a></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td></td><td class="description"><p>showing you what team can do for you or have done for others</p></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1 cut"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1 cut"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td><img class="arrow" src="<?php bloginfo('template_directory'); ?>/images/arow.gif" alt=""></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1a row-lg-1a row-md-1a row-sm-1a"><td></td><td class="tabs"><a href="http://inspirati.byethost7.com/contact-us/">Contact Us</a></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td class="description"><p>fast contact for support </p></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1 cut"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1 cut"><td></td><td></td><td></td><td></td><td></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td><img class="arrow" src="<?php bloginfo('template_directory'); ?>/images/arow.gif" alt=""></td><td></td><td></td><td></td><td><img class="arrow" src="<?php bloginfo('template_directory'); ?>/images/arow.gif" alt=""></td></tr>
+							<tr class="row-xs-1a row-lg-1a row-md-1a row-sm-1a"><td class="tabs"><a href="http://inspirati.byethost7.com/portfolio/">Prtfolio</a></td><td></td><td></td><td></td><td class="tabs"><a href="http://inspirati.byethost7.com/articles/">articles</a></td></tr>
+							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td class="description"><p>Portfolios and Description</p></td><td></td><td></td><td></td><td class="description"><p>Useful articles about web develop</p></td></tr>
+							<tr>
+							<td>
+							<form action="#" method="POST">
+							<select name="porto" id="portfolioID" onchange="this.form.submit()">
+							<optgroup label="E-commerce">
+							<option value="">Select</option>
+							<option value="3DaVinci">3DaVinci</option>
+							<option value="2birds">2birds</option>
+							</optgroup>
 
-					the_post();
-					echo '<div class="rect">';
-					echo '<h1><a href="';
-					the_permalink();	
-					echo'">  ';
-					the_title();
-					echo '</a></h1>';
-					echo '<br/>';
-					
-					echo '<br/>';
-					
-					the_content('<br/><p class="push_button">Read more </p>');
-					echo '</div>';
-					echo '<div class="postedby">';
-					echo '<a href="';
-					the_author_link();
-					echo '">';
-					the_author();
-					echo "</a>";
-					echo '<a href="';
-					the_permalink();	
-					echo '">';
-					the_date('F Y');
-					echo '</a>';
-					
-					the_category();
-					
-					echo '<br/>';
-					echo '</div>';
+							</select>
+							<!--input type="submit" value="Send" /-->
+							</form>
+							</td>
+							
+							<td></td>
+							<td></td>
+							<td></td>
+							
+							<td>
+							<form action="#" method="POST">							
+							<select name="arti" id="articlesID" onchange="this.form.submit()">
+							<optgroup label="Web Design">
+							<option value="">select</option>
+							<option value="article1">article1</option>
+							<option value="article2">article2</option>
+							</optgroup>
+						    <optgroup label="Web Develop">
+						    </optgroup>		
+							</form>							
+							</td>
+							</tr>
 
-					}
-					}else { echo "No Content Found , or there is nothing posted By you yet";}					            
-					?>	
-										
+							<tr>
+							<td>
+							<?php 
+							if(isset($_POST["porto"]))
+							{
+								$portfolioName= $_POST["porto"];
+								if ($portfolioName=='3DaVinci') {
+									
+								
+								$row="";
 
+								$link = mysql_connect("sql100.byethost7.com","b7_16817694","qwerREWQ1234$#@!");
+								mysql_select_db("b7_16817694_wordpress20151030");
+								$query = "SELECT * from wp_posts ORDER by ID DESC limit 0,5";
+								$result = mysql_query($query);
+								$result = mysql_query($query) or die("Query to get blah failed with error:".mysql_error());
+
+								while($row = mysql_fetch_array($result)) { 
+									echo "<div>";
+									echo "<h1 class='title' >".$row['post_title']."</h1>";
+									echo "<p class='post_date'>".$row['post_date']."</p>";
+									echo "<br/></div>";
+									}
+  								mysql_close($link);
+  								}
+							}
+							elseif (!isset($_POST["porto"])) {
+								//echo "error please select";
+								echo "<div>";
+								echo "<h1 class='title' >".$row['post_title']."</h1>";
+								echo "<p class='post_date'>".$row['post_date']."</p>";
+								echo "<br/></div>";								
+							}
+							?>
+							</td>
+			
+							<td></td>
+							<td></td>
+							<td></td>
+
+							<td>
+							<?php 
+							if(isset($_POST["arti"]))
+							{
+								$portfolioName= $_POST["arti"];
+								if ($portfolioName=='article1') {
+									
+								
+								$row="";
+
+								$link = mysql_connect("sql100.byethost7.com","b7_16817694","qwerREWQ1234$#@!");
+								mysql_select_db("b7_16817694_wordpress20151030");
+								$query = "SELECT * from wp_posts ORDER by ID DESC limit 0,5";
+								$result = mysql_query($query);
+								$result = mysql_query($query) or die("Query to get blah failed with error:".mysql_error());
+
+								while($row = mysql_fetch_array($result)) { 
+									echo "<div>";
+									echo "<h1 class='title' >".$row['post_title']."</h1>";
+									echo "<p class='post_date'>".$row['post_date']."</p>";
+									echo "<br/></div>";
+									}
+  								mysql_close($link);
+  								}
+							}
+							elseif (!isset($_POST["arti"])) {
+								//echo "error please select";
+								echo "<div>";
+								echo "<h1 class='title' >".$row['post_title']."</h1>";
+								echo "<p class='post_date'>".$row['post_date']."</p>";
+								echo "<br/></div>";
+							}
+							?>
+							</td>
+							</tr>
+						</table>
+					</div>	
 				</div>
+				</div>
+
 		    </div>
-
-                	<?php /*get_template_part('comments');*/?>
-		    <!-- 2-2 ) sidebar part if you want -->
-			<div class="sidebar">
-				<div class=" col-xs-3 col-lg-3 col-md-12 col-sm-12 ">
-                	<?php get_sidebar(); ?>
-                	<br/>
-				</div>
-			</div>
 
 		</div>
 		<!--End Row -->
 		</div>
 		<!--End main -->
+
+		<div class="mapper">
+		<div class="row">
+		<div class=" col-xs-12 col-lg-12 col-md-12 col-sm-12 relative">
+			<iframe id='gmap'src="https://www.google.com/maps/d/embed?mid=zvP4vccIyHic.kwFmYMSEnOAo&hl=en_US" width="100%" height="480"></iframe>
+
+			<div id="map" style="width:100%;height:400px"></div>
+		</div>
+        </div>
+        </div>
 		<br>
 		<!-- 3 ) footer-->
 		<footer>
@@ -117,40 +225,18 @@ Template Name:sitemap
 	
 	</div>
 	<!-- End Container-->
-	<script>
 
-	$('.banner > img:gt(0)').hide();
-		setInterval(function() { 
-		  $('.banner > img:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('.banner');
-		},  1000);
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
 
-$(window).on('scroll', function()
-{
-  stop = Math.round($(window).scrollTop());
-    if (stop > 540)
-    {
-      $('nav').addClass('navbar-fixed-top');
-      
-    }
-    if(stop<540)
-    {
-    $('nav').removeClass('navbar-fixed-top');	
-    }
+<script>
+var mapCanvas = document.getElementById("map");
+var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.2), zoom: 10
 }
-);
-// 	$(document).ready(function() {
-//   var navpos = $('.menu>ul').offset();
-//   console.log(navpos.top);
-//     $(window).bind('scroll', function() {
-//       if ($(window).scrollTop() > navpos.top) {
-//         $('.menu>ul').addClass('fixed');
-//        }
-//        else {
-//          $('.menu>ul').removeClass('fixed');
-//        }
-//     });
-// });	
-	</script>
-<?php wp_footer(); ?>	
+var map = new google.maps.Map(mapCanvas, mapOptions);
+</script>
+
+	<?php get_template_part('script'); ?>
+
 </body>
 </html>

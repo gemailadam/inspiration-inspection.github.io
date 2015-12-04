@@ -1,6 +1,4 @@
 <section class="site-title" >
-<img id="logo" src="<?php bloginfo('template_directory'); ?>/images/logo.png ?>" alt="">
-
 	<?php echo '<p><a href="'; the_permalink();echo '">'; bloginfo('title');echo '</a></p><br/>'; ?>
 	<?php echo '<a href="'; the_permalink();echo '">'; bloginfo('description');echo '</a>'; ?>
 
@@ -49,7 +47,11 @@
 			 				}
 			 			 ?>
 			 		</div>
-			 		
+
+			 		<div class="logo">
+			 			<img id="logo" src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="">
+			 		</div>
+
 			 		<div class="galleryPreviewarrow">
 			 			<a href="#" class="previousslidearrow">&lt;</a>
 			 			<a href="#" class="nextslidearrow">&gt;</a>
@@ -79,8 +81,8 @@
 			
 
 </section>
-<img id="shadow" src="<?php bloginfo('template_directory'); ?>/images/shadow.png" alt="">
-<img id="btn" src="<?php bloginfo('template_directory'); ?>/images/btn.png" alt="" usemap="#planetmap">
+<img id="shadow" src="<?php bloginfo('template_directory'); ?>/images/shadow.gif" alt="">
+<!--img id="btn" src="<?php bloginfo('template_directory'); ?>/images/btn.png" alt="" usemap="#planetmap"-->
  
 <map name="planetmap">
   <area class="circlarrow" shape="poly" coords="0,0,0,150,75,75" href="#" alt="Sun" onmouseover="this.style.Color='#FF7f00';" onmouseout="this.blur();">

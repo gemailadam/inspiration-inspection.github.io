@@ -116,7 +116,7 @@ echo "}<br/><br/>";
 
 <?php 
 $calc=750;
-while ($calc>=298) {
+while ($calc>=98) {
 echo "@media (min-width:". ($calc-4) ."px ) and (max-width:".$calc."px  ) {<br/>";
 echo ".container { width:".($calc-8)."px; }<br/>";
 echo ".row { width:".($calc-4)."px; }<br/>";
@@ -138,30 +138,30 @@ $calc = $calc-4;
 
 ?>
 
-<br/>
+<!--br/>
 <br/>
 @media (min-width: 8px ) and (max-width:294px) { 
 <br/>
 .container { width: 290px; } 
 <br/>
 .row {width: 290px;}
-<br/>
+<br/-->
 
 <?php 
-$calc=290;
-echo ".col-sm-12 {width:". $calc*(100/100) ."px;}<br/>";
-echo ".col-sm-11 {width:". $calc*(91.66666667/100) ."px;}<br/>";
-echo ".col-sm-10 {width:". $calc*(83.33333333/100) ."px;}<br/>";
-echo ".col-sm-9 {width:". $calc*(75/100) ."px;}<br/>";
-echo ".col-sm-8 {width:". $calc*(66.66666667/100) ."px;}<br/>";
-echo ".col-sm-7 {width:". $calc*(58.33333333/100) ."px;}<br/>";
-echo ".col-sm-6 {width:". $calc*(50/100) ."px;}<br/>";
-echo ".col-sm-5 {width:". $calc*(41.66666667/100) ."px;}<br/>";
-echo ".col-sm-4 {width:". $calc*(33.33333333/100) ."px;}<br/>";
-echo ".col-sm-3 {width:". $calc*(25/100) ."px;}<br/>";
-echo ".col-sm-2 {width:". $calc*(16.66666667/100) ."px;}<br/>";
-echo ".col-sm-1 {width:". $calc*(8.33333333/100) ."px;}<br/>";
-echo "}<br/><br/>";
+// $calc=290;
+// echo ".col-sm-12 {width:". $calc*(100/100) ."px;}<br/>";
+// echo ".col-sm-11 {width:". $calc*(91.66666667/100) ."px;}<br/>";
+// echo ".col-sm-10 {width:". $calc*(83.33333333/100) ."px;}<br/>";
+// echo ".col-sm-9 {width:". $calc*(75/100) ."px;}<br/>";
+// echo ".col-sm-8 {width:". $calc*(66.66666667/100) ."px;}<br/>";
+// echo ".col-sm-7 {width:". $calc*(58.33333333/100) ."px;}<br/>";
+// echo ".col-sm-6 {width:". $calc*(50/100) ."px;}<br/>";
+// echo ".col-sm-5 {width:". $calc*(41.66666667/100) ."px;}<br/>";
+// echo ".col-sm-4 {width:". $calc*(33.33333333/100) ."px;}<br/>";
+// echo ".col-sm-3 {width:". $calc*(25/100) ."px;}<br/>";
+// echo ".col-sm-2 {width:". $calc*(16.66666667/100) ."px;}<br/>";
+// echo ".col-sm-1 {width:". $calc*(8.33333333/100) ."px;}<br/>";
+// echo "}<br/><br/>";
 ?>
 
 

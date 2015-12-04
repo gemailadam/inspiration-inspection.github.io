@@ -1,51 +1,116 @@
 /**
-* Theme Name: 3CMS
-* Theme URI: http://http://inspiration-inspection.ml/3CMS#
-* Description: 3CMS# is a versatile and easy to customize WordPress theme, instantly giving a professional look to your online presence. Designed with visitor engagement in mind, it allows anyone to create a beautiful, fast and mobile friendly website compatible with all browsers and devices. Customizr works fine with major WordPress plugins like WooCommerce, bbPress, JetPack and many others. Top rated by hundreds and with an extremely active community of users and developers, the Customizr theme is a safe and reliable design option to publish your WordPress content.
+* Theme Name: 3DaVinci
+* Theme URI: http://inspiration-inspection.ml/3DaVinci 
+* Description: 3DaVinci  is a versatile and easy to customize WordPress theme, instantly giving a professional look to your online presence. Designed with visitor engagement in mind, it allows anyone to create a beautiful, fast and mobile friendly website compatible with all browsers and devices. works fine with major WordPress plugins like WooCommerce, bbPress, JetPack and many others. Top rated by hundreds and with an extremely active community of users and developers, the 3DaVinci theme is a safe and reliable design option to publish your WordPress content.
 * Version: 1.0.0
 * Author: Hesham Hussain [adam adam]
-* Author URI: http://inspiration-inspection.ml/heshamhussaincurlicumvital
+* Author URI: http://inspiration-inspection.ml/adam-curriculum-vitae/
 * Tags: gray, white, light, blue, red, yellow, green, purple, orange, black, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-menu, custom-colors, featured-images, full-width-template, theme-options, threaded-comments, translation-ready, sticky-post, post-formats, rtl-language-support, editor-style
-* Text Domain: customizr
+* 
 * Copyright: (c) 2015 Hesham (adam), Giza, Egypt
 * License: GNU General Public License v2.0 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 
-/**
-* The styleheets of Customizr are located in inc/assets/css. Each skin has its own stylesheet : blue.css, green.css, ...
-* The current stylesheet is loaded after the main skin stylesheet.
-*
-* IMPORTANT : If you write your CSS code below, it will be deleted when you'll update the theme.
-* If you want to make quick style test / changes, consider using the Custom CSS section in appearance > customize > advanced options > Custom CSS, it will persist on update since it is saved in your database.
-* To make important CSS customizations, you'll want to use a child theme and add your css code in the style.css file of it.
-*/
-html {
-  color:white;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-}
-ul,li {list-style: none;}
-a:link {color: #fff;}
-a:visited {color: #aaa;}
-body {background-color: #111;}
- 
-.row {background-color: #222;}
-.sidebar aside {margin:0 5px;padding: 10px 10px;  background-color: #222;box-shadow: 0px 4px 8px #000;}
-.rect {margin:0 5px;background-color: #222;padding: 0 20px;}
-.sidebar li.widget {border-bottom:5px solid #fff;}
-.site-title a:visited {color: #fff;}
-.site-title a {font-size: 30px;padding: 0;text-decoration: none;padding: 0 80px;font-weight: bold;}
-.site-title p a {font-size: 40px;padding: 0;text-decoration: none;padding: 0 40px;font-weight: bold;}
 
 @media (max-width: 700px){
-.site-title a {font-size: 20px;padding: 0;text-decoration: none;padding: 0 20px;font-weight: bold;}
-.site-title p a {font-size: 20px;padding: 0;text-decoration: none;padding: 0 20px;font-weight: bold;}
+.site-title a {font-size: 20px;padding: 0 20px;}
+.site-title p a {font-size: 25px;padding: 5px 10px;}	
 
 }
 
-.banner {position: relative;}
-.banner #img1 {width:90%;margin:10px 5%;position: absolute; }
-.banner #img2 {width:90%;margin:10px 5%;position: relative; }
-#img9 {height: 100px;width:100%;}
+@media (max-width: 500px){
+.site-title a {font-size: 15px;padding: 0 20px;}
+.site-title p a {font-size: 15px;padding: 5px 10px;}
+
+.cut {display: none;}	
+
+}
+
+
+/* page.css*/
+/* page.css*/
+.page .rect {
+	background-color: #222;
+	margin:0 5px;padding: 0 20px;
+	border-bottom:1px solid #fff;border-radius: 15px;
+}
+
+.page div.archive{font-size: 16px;padding-left: 20px;color: #fff;text-shadow: 0px 6px 4px #000;}
+
+.postedby {width:92%;box-shadow:inset 0px -1px 1px #777;display: inline-block;background-color: #000;padding: 0 2%;margin: 10px 2%;}
+.postedby a {margin: 10px;padding:0;float: left;}
+.postedby ul {margin: 0;padding:0;}
+
+.sidebar aside {margin:0 5px;padding: 10px 10px;  background-color: #222;box-shadow: 0px 4px 8px #000;}
+.sidebar li.widget {border-bottom:5px solid #fff;}
+
+
+
+@media (max-width: 1200px){
+
+}
+
+/* out */
+/* inline-block = float:left + clear both*/
+/*
+.floating-box {
+    float: left;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;
+}
+
+.after-box {
+    clear: left;
+}
+*/
+ /* equal == */
+ /*
+.floating-box {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;
+}
+*/
+/* out */
+/* inline-block = float:left + clear both*/
+/*
+.floating-box {
+    float: left;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;
+}
+
+.after-box {
+    clear: left;
+}
+*/
+ /* equal == */
+ /*
+.floating-box {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;
+}
+*/
+
+
+/**************************************************************************************/
+/**************************************************************************************/
+
+/*  slideshow */
+/*  slideshow */
+/*  slideshow */
+
+/*
+body{padding: 0;margin:0;}
+*/

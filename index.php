@@ -17,6 +17,8 @@ readfile("original.pdf");
 <html <?php language_attributes(); ?>>
 <head>
 
+		<?php // wp_head(); ?>
+
 		<?php get_template_part('head_html'); ?>
 
 </head>
@@ -71,7 +73,7 @@ readfile("original.pdf");
 	</div>
 	<!-- End Container-->
 
-	<?php get_template_part('script'); ?>
+	<?php wp_footer(); ?>
 
 </body>
 </html>

@@ -1,11 +1,20 @@
 <?php 
 require_once('src/style.php');
+require_once('src/changetheme.php');
+// require_once('src/style/change-all-white.php');
+// require_once('src/style/change-all-red.php');
+// require_once('src/style/change-all-green.php');
+// require_once('src/style/change-all-blue.php');
+// require_once('src/style/change-all-black.php');
 require_once('src/layout.php');
 require_once('src/addbar.php');
 require_once('src/test.php');
 require_once('src/class_customizer_js.php');
 require_once('src/admin_style.php');
 require_once('src/woocommerce_action.php');
+require_once('src/postperpage.php');
+require_once('src/script.php');
+require_once('src/head.php');
 
 
 
@@ -132,13 +141,13 @@ echo '<label for="">Password:</label> <input type="text">';
 
 }
 
-wp_enqueue_script( 'jquery-ui-dialog' );
-// jQuery
-wp_enqueue_script('jquery');
-// This will enqueue the Media Uploader script
-wp_enqueue_media();
+// wp_enqueue_script( 'jquery-ui-dialog' );
+// // jQuery
+// wp_enqueue_script('jquery');
+// // This will enqueue the Media Uploader script
+// wp_enqueue_media();
 ?>
-    <div>
+    <!--div>
     <label for="image_url">Image</label>
     <input type="text" name="image_url" id="image_url" class="regular-text">
     <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Upload Image">
@@ -165,7 +174,7 @@ jQuery(document).ready(function($){
         });
     });
 });
-</script>
+</script-->
 <?php 
 function load_wp_media_files() {
     wp_enqueue_media();

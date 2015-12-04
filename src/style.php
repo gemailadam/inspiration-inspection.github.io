@@ -26,7 +26,7 @@ function customize_theme($wp_customize){
         'description' => 'Change background and container colors or images',
         'priority' => '1' ));
 
-    $wp_customize->add_setting('Background_COLOR_Settings_ID',array('default' => '#222' ));
+    $wp_customize->add_setting('Background_COLOR_Settings_ID',array('default' => '' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'Background_COLOR_Settings_ID',array(
         'label' =>'Background Color',
@@ -52,7 +52,7 @@ function customize_theme($wp_customize){
 
 
 // row background color
-    $wp_customize->add_setting('row_bg_color_id',array('default' => '#222' ));
+    $wp_customize->add_setting('row_bg_color_id',array('default' => '' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'row_bg_color_id',array(
         'label' =>'Bg COLOR',
@@ -71,7 +71,7 @@ function customize_theme($wp_customize){
         'description' => 'hesham description here',
         'priority' => '2' ));
 
-    $wp_customize->add_setting('HTML_COLOR_Settings_ID',array('default' => '#fff' ));
+    $wp_customize->add_setting('HTML_COLOR_Settings_ID',array('default' => '' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'HTML_COLOR_Settings_ID',array(
         'label' =>'Pragraphs COLOR',
@@ -79,7 +79,7 @@ function customize_theme($wp_customize){
         'settings' => 'HTML_COLOR_Settings_ID' )));
 
 // a color
-   $wp_customize->add_setting('a_color_id',array('default' => '#fff' ));
+   $wp_customize->add_setting('a_color_id',array('default' => '' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_color_id',array(
         'label' =>'a colors',
@@ -90,7 +90,7 @@ function customize_theme($wp_customize){
 
 // a link color
 
-    $wp_customize->add_setting('a_link_color_id',array('default' => '#fff' ));
+    $wp_customize->add_setting('a_link_color_id',array('default' => '' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_link_color_id',array(
         'label' =>'linls colors',
@@ -99,7 +99,7 @@ function customize_theme($wp_customize){
 
 // a visited color
 
-    $wp_customize->add_setting('a_visited_color_id',array('default' => '#aaa' ));
+    $wp_customize->add_setting('a_visited_color_id',array('default' => '' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_visited_color_id',array(
         'label' =>'Visited Links Colors',
@@ -109,7 +109,7 @@ function customize_theme($wp_customize){
 
 // a Hover color
 
-    $wp_customize->add_setting('a_hover_color_id',array('default' => '#999' ));
+    $wp_customize->add_setting('a_hover_color_id',array('default' => '' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_hover_color_id',array(
         'label' =>'Hover Links Colors',
@@ -118,7 +118,7 @@ function customize_theme($wp_customize){
 
 // site title visited color
     
-    $wp_customize->add_setting('site_title_visited_color_id',array('default' => '#fff' ));
+    $wp_customize->add_setting('site_title_visited_color_id',array('default' => '' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'site_title_visited_color_id',array(
         'label' =>'Hover Links Colors',
@@ -132,7 +132,7 @@ function customize_theme($wp_customize){
         'description' => 'hesham description here',
         'priority' => '1' ));
 
-    $wp_customize->add_setting('nav_ul_bg_color_id',array('default' => '#444' ));
+    $wp_customize->add_setting('nav_ul_bg_color_id',array('default' => '' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'nav_ul_bg_color_id',array(
         'label' =>'navigation background color',
@@ -183,8 +183,8 @@ function css_customizer(){
 
 
 <style type="text/css">
-html {
-  color:<?php echo get_theme_mod('HTML_COLOR_Settings_ID','#fff'); ?>;
+/*html {
+  color:<?php echo get_theme_mod('HTML_COLOR_Settings_ID',''); ?>;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
  
@@ -201,10 +201,10 @@ body {
 
 }
 
-a {color: <?php echo get_theme_mod('a_color_id','#fff'); ?>;}
-a:link {color: <?php echo get_theme_mod('a_link_color_id','#fff'); ?>;}
-a:visited {color:<?php echo get_theme_mod('a_visited_color_id','#aaa'); ?>;}
-a:hover {color: <?php echo get_theme_mod('a_hover_color_id','#999'); ?>;}
+a {color: <?php echo get_theme_mod('a_color_id',''); ?>;}
+a:link {color: <?php echo get_theme_mod('a_link_color_id',''); ?>;}
+a:visited {color:<?php echo get_theme_mod('a_visited_color_id',''); ?>;}
+a:hover {color: <?php echo get_theme_mod('a_hover_color_id',''); ?>;}
 
 
 ul,li {list-style: none;padding: 0;margin: 0;}
@@ -212,18 +212,61 @@ ul,li {list-style: none;padding: 0;margin: 0;}
 
 .gap {clear:both;}
 .container { } 
-.row {background-color:<?php echo get_theme_mod('row_bg_color_id','#222'); ?>;}
+.row {background-color:<?php echo get_theme_mod('row_bg_color_id',''); ?>;}
 
-.site-title a:visited {color:<?php echo get_theme_mod('site_title_visited_color_id','#fff'); ?>;}
+.site-title a:visited {color:<?php echo get_theme_mod('site_title_visited_color_id',''); ?>;}
+*/
 
+/* roots.css */
+html {
+  color:white;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {
+    background-color: #222;
+    padding:0;margin:0;
+
+ }
+a:link {color: #fff;}
+a:visited {color: #aaa;}
+a:hover {color: #999;}
+
+
+ul,li {list-style: none;padding: 0;margin: 0;}
+
+
+/* essential classes */
+/* essential classes */
+
+.gap {clear:both;}
+.container { } 
+.row {
+    /*background-color: #222;*/
+
+}
+
+/* header.css*/
+.site-title a:visited {color: #fff;}
 .site-title a {
-    font-size: 25px;text-decoration: none;font-weight: bold;
-  padding: 0 80px;
-  text-shadow: 0px 1.1px 0 #444, 0px 1.3px 0 #444,0px 1.5px 0 #444,0px 1.7px 0 #444,0px 2.1px 0 #444, 0px 2.3px 0 #444,0px 2.5px 0 #444,0px 2.7px 0 #444,0px 3.1px 0 #444, 0px 3.3px 0 #444,0px 3.5px 0 #444,0px 3.7px 0 #444,0px 4.1px 0 #444, 0px 4.3px 0 #444,0px 4.5px 0 #444,0px 4.7px 0 #444, 0 5px 0 #444,0 4px 0 #444, 0 3px 0 #444, 0 2px 0 #444, 0 1px 0 #444;
+    color:#fff;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 80px;
+    text-shadow: 0px 1.1px 0 #444, 0px 1.3px 0 #444,
+    0px 1.5px 0 #444,0px 1.7px 0 #444,0px 2.1px 0 #444,
+     0px 2.3px 0 #444,0px 2.5px 0 #444,0px 2.7px 0 #444,
+     0px 3.1px 0 #444, 0px 3.3px 0 #444,0px 3.5px 0 #444,
+     0px 3.7px 0 #444,0px 4.1px 0 #444, 0px 4.3px 0 #444,
+     0px 4.5px 0 #444,0px 4.7px 0 #444, 0 5px 0 #444,
+     0 4px 0 #444, 0 3px 0 #444, 0 2px 0 #444, 0 1px 0 #444;
 }
 .site-title p a {
-    font-size: 30px;text-decoration: none;font-weight: bold;
-  padding: 10px 20px;margin: 0 10px;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;margin: 0 10px;
     border-radius:5px;
     border:solid 1px #ccc;
     box-shadow: 0px 9px 0px #444;
@@ -231,21 +274,9 @@ ul,li {list-style: none;padding: 0;margin: 0;}
         -moz-box-shadow: 0px 9px 0px #444 ;      
     
 }
-
-@media (max-width: 700px){
-.site-title a {font-size: 20px;padding: 0 20px;}
-.site-title p a {font-size: 25px;padding: 5px 10px;}    
-
-}
-
-@media (max-width: 500px){
-.site-title a {font-size: 15px;padding: 0 20px;}
-.site-title p a {font-size: 15px;padding: 5px 10px;}    
-
-}
 .banner {position: relative;}
 
-.banner img {width:90%;margin:10px 5%;position: absolute;
+.banner img {width:90%;margin:10px 5%;/*position: absolute;*/
     border-radius:5px;
     border:solid 1px #ccc;
     box-shadow: 0px 9px 0px  #444 , 0px 20px 25px #000;
@@ -254,20 +285,179 @@ ul,li {list-style: none;padding: 0;margin: 0;}
       text-shadow: 0px 7px 0 #444, 0px 6px 0 #444, 0 5px 0 #444,0 4px 0 #444, 0 3px 0 #444, 0 2px 0 #444, 0 1px 0 #444;
     }
 
-img#shadow { width:90%;margin:10px 5%;position:relative;z-index: -10;}
-/*navbar Primary */
 
-/* .nav div was .menu */
+img#shadow { width:90%;margin:10px 5%;position:relative;z-index: -10;}
+
+img#btn { width:12%;margin:10px 5%;position:absolute;left:75%;top:460px;}
+img#logo {position: absolute;width:12%;margin-right:0px;margin-top: 10px;box-shadow:5px 5px 40px #000;z-index: 10;}
+
+.circlarrow:hover {color: #ff7f00;}
+
+/* slideshow */
+a,.galleryThumbnil img{
+transition:all 150 ms linear;
+-webkit-transition:all 150 ms linear;
+-moz-transition:all 150 ms linear;
+
+}
+
+
+.gallerycontainer{
+    margin: 40px auto;
+    /*width: 900px;*/
+}
+
+.galleryPreviewContainer {
+    position: relative;
+}
+
+.galleryPreviewImage img{/*that mean all images disappear exept img.previewImage1 [Next]*/
+    /*display: none;/* new cut*/
+    position: absolute;/* new change - prev > position: relative;*/
+    top:0;
+    left:0;
+    box-shadow: ;
+-webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-webkit-border-bottom-right-radius:30px;
+-webkit-border-bottom-left-radius: 30px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+-moz-border-radius-bottomright: 30px;
+-moz-border-radius-bottomleft: 30px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 30px;
+border-bottom-left-radius: 30px;
+}
+
+img.previewImage1 {
+    /*display: block;/* new cut*/
+}
+/*
+.galleryThumbnilContainer{
+    width:900px;
+    overflow-x:auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 20px 0; 
+}
+.galleryThumbnil {
+    width: 2600px;
+}
+.galleryThumbnil img {
+    margin-right: 10px;
+    top:0;
+    border-radius: 20px;    
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border:4px solid #222 ;
+    position: relative;
+}
+.galleryThumbnil a:hover img {
+    top:-5px;
+    border:4px solid #333;
+}
+
+.galleryThumbnil a.active img {
+    
+    border:2px solid #ff7f00;
+}
+*/
+
+
+.gallerydescription > div {
+    display: none;
+    position: absolute;
+    bottom:-1500%;
+    left:5.1%;
+    width:80%;
+background-color:rgba(0, 0, 0, 0.4);
+padding:2% 5%;margin: 0;
+
+}
+
+.gallerydescription > div a  {
+display: block;
+}
+.gallerydescription > div input {
+color: #fff;
+background-color: #222;
+border-radius: 3px;
+border:2px solid #444;
+box-shadow: 2px 2px 4px #000;
+}
+.gallerydescription > div input:hover {
+box-shadow: 0 0 0 #000;
+    
+}
+.gallerydescription > div.visible {
+    display: block;
+}
+.galleryPreviewarrow a {
+    font-family: arial,sans-serif;
+    font-size: 30px;
+    background-color:rgba(0,0,0,0.3);
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 100px;/*35px because of 70px width and height*/
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+    position: absolute;
+    left:60px;
+    top:200px; /* new *//* top:50%;*/
+    margin-top: -35px;
+
+    
+}
+a.nextslidearrow{
+    right: 60px;
+    left:auto;
+}
+.galleryPreviewarrow a:hover {
+    background-color: #000;
+    margin-top: -40px;
+}
+.galleryNavigationBullets {
+    text-align: center;
+    margin:20px auto 60px auto;
+    position: relative;/* new */
+    top:420px;/* new */
+
+}
+.galleryNavigationBullets span {
+    display: none;
+}
+.galleryNavigationBullets a {
+    background-color: #ddd;
+    width:20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 35px;/* new */
+}
+.galleryNavigationBullets a:hover ,.galleryNavigationBullets a.active {
+    background-color:#555;
+}
+
+
+
+/* navbar.css*/
 .nav div {
     height:50px;width:90%;
     padding: 0px;margin: 0px auto ;
-    border-radius:3px 3px 30px 30px;border:solid 1px #ccc;
+    border-radius:2px 2px 30px 30px;border:solid 1px #ccc;
     box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
 
     }
 
 .nav div > ul {
-    background-color:<?php echo get_theme_mod('nav_ul_bg_color_id','#444'); ?>;
+    background-color: #444;
     border-radius:3px 3px 30px 30px;
     height:50px;
     padding: 0 30px;
@@ -325,7 +515,11 @@ img#shadow { width:90%;margin:10px 5%;position:relative;z-index: -10;}
 .nav div > ul > li > ul > li:hover > ul {left:130px;top:auto;margin-top:-65px; }
 .nav div > ul > li > ul > li > ul > li {}
 
+/*navbar Primary */
+.navbar-fixed-top{top:0;}
 
+
+/*page.css*/
 .page .rect {
     background-color: #222;
     margin:0 5px;padding: 0 20px;
@@ -338,29 +532,32 @@ img#shadow { width:90%;margin:10px 5%;position:relative;z-index: -10;}
 .postedby a {margin: 10px;padding:0;float: left;}
 .postedby ul {margin: 0;padding:0;}
 
+.rect .push_button a ,.push_button a:link,.push_button a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+.rect .push_button{ border-top: solid 5px #fff;}
+.rect .push_button a:hover {color:#ccc;}
+
+
+
+/* 404 */
+/* 404 */
+
+.oops h1 {
+    color:#D94E3B;
+    padding: 10px 20px;margin:10px 10px;
+    box-shadow:2px 2px 4px #111;
+    text-shadow:2px 2px 4px #111;
+}
+
+/* sidebar.css*/
+
 .sidebar aside {margin:0 5px;padding: 10px 10px;  background-color: #222;box-shadow: 0px 4px 8px #000;}
 .sidebar li.widget {border-bottom:5px solid #fff;}
 
 
-.footer1 {float: left;width:96%;margin:5px 2%;padding: 0px 0px;background-color: #222;box-shadow: 0px 4px 8px #000;}
-.footer1 li.widget {float: left;padding: 30px;}
 
-
-.footer2 {float: left;width:96%;margin:5px 2%;padding: 0px 0px;background-color: #222;box-shadow: 0px 4px 8px #000;}
-.footer2 li.widget {float: left;padding:30px;}
-.footer2 li.widget:first-child { clear: left;}
-.footer2 li.widget:last-child { clear: right;}
-
-.footer3 {float: left;width:96%;margin:5px 2%;padding: 0px 0px;background-color: #222;box-shadow: 0px 4px 8px #000;}
-.footer3 li.widget {float: left;padding: 30px;}
-.footer3 li.widget:first-child {clear:left;}
-
-@media (max-width: 1200px){
-
-}
-
-.fl-ri{float: right;}
-footer img {width: 100%;height: 100px; }
 /****************************************************
  *  Push Button
  *****************************************************/
@@ -385,21 +582,203 @@ footer img {width: 100%;height: 100px; }
         -moz-box-shadow: 0px 9px 0px #84261a;
         box-shadow: 0px 9px 0px #84261a;
 }
-.rect .push_button a ,.push_button a:link,.push_button a:visited {
-    color: #fff;
-    text-decoration: none;
-}
-.rect .push_button{ border-top: solid 5px #fff;}
-.rect .push_button a:hover {color:#ccc;}
 
-.oops h1 {
-    color:#D94E3B;
-    padding: 10px 20px;margin:10px 10px;
-    box-shadow:2px 2px 4px #111;
-    text-shadow:2px 2px 4px #111;
+
+/* footer.css */
+
+
+.footer1 {float: left;width:96%;margin:5px 2%;padding: 0px 0px;background-color: #222;box-shadow: 0px 4px 8px #000;}
+.footer1 li.widget {float: left;padding: 30px;}
+
+
+.footer2 {float: left;width:96%;margin:5px 2%;padding: 0px 0px;background-color: #222;box-shadow: 0px 4px 8px #000;}
+.footer2 li.widget {float: left;padding:30px;}
+.footer2 li.widget:first-child { clear: left;}
+.footer2 li.widget:last-child { clear: right;}
+
+.footer3 {float: left;width:96%;margin:5px 2%;padding: 0px 0px;background-color: #222;box-shadow: 0px 4px 8px #000;}
+.footer3 li.widget {float: left;padding: 30px;}
+.footer3 li.widget:first-child {clear:left;}
+
+
+.fl-ri{float: right;}
+footer img {width: 100%;height: 100px; }
+
+/* sitemap.css */
+
+.wrapper{position: relative;width: 100%;}
+img.sitemap {
+    position: absolute;
+    z-index: 1;
+    margin:0 auto;
+    padding: 0;
+    width: 100%;    
+
+}
+img.sitemapback {
+    position: relative;
+    z-index: -1;
+    margin:0 auto;
+    padding: 0;
+    width: 100%;    
+
 }
 
-.navbar-fixed-top{top:0;}
+.maplinks table {
+    z-index: 1;
+    width:98%;
+    position: relative;
+    padding: 0px;margin: 0px auto 20px auto ;
+    -webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-webkit-border-bottom-right-radius:30px;
+-webkit-border-bottom-left-radius: 30px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+-moz-border-radius-bottomright: 30px;
+-moz-border-radius-bottomleft: 30px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 30px;
+border-bottom-left-radius: 30px;
+    box-shadow: 0px 6px 0px #444,0px -3px 0px #444,0px 20px 15px #111,0px -6px 15px #111;;
+}
+
+.maplinks table tr td {width: 20%;}
+.maplinks table tr {float: none;}
+#gmap{position: relative;}
+.tabs {text-align: center;}
+.tabs a {
+    color:#ff0033;
+    box-shadow: 2px 2px 4px #000,-2px -2px 4px #000;
+    margin: 0 auto;
+    padding: 2px 5px;
+    text-align: center;
+    text-shadow:2px 2px 4px #000;
+    background-color:rgba(0,0,0,0.2); 
+}
+.tabs a:hover {
+    box-shadow: 1px 1px 0px #000;
+}
+.description p {    
+    background-color:rgba(0,0,0,0.3);
+    padding: 2% 2%;
+}
+#portfolioID {box-shadow: 2px 2px 0px #000;border-radius: 5px;border: 2px solid #ff0033;text-align: center;color:black;}
+#articlesID {box-shadow: 2px 2px 0px #000;border-radius: 5px;border: 2px solid #ff0033;text-align: center;color:black;}
+#portfolioID {
+    width:60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+#articlesID {
+    width:60%;
+    margin-left: auto;
+    margin-right: auto; }
+
+
+
+@media (max-width: 700px){
+.site-title a {font-size: 20px;padding: 0 20px;}
+.site-title p a {font-size: 25px;padding: 5px 10px;}    
+
+}
+
+@media (max-width: 500px){
+.site-title a {font-size: 15px;padding: 0 20px;}
+.site-title p a {font-size: 15px;padding: 5px 10px;}
+
+.cut {display: none;}   
+
+}
+
+
+/* page.css*/
+/* page.css*/
+.page .rect {
+    background-color: #222;
+    margin:0 5px;padding: 0 20px;
+    border-bottom:1px solid #fff;border-radius: 15px;
+}
+
+.page div.archive{font-size: 16px;padding-left: 20px;color: #fff;text-shadow: 0px 6px 4px #000;}
+
+.postedby {width:92%;box-shadow:inset 0px -1px 1px #777;display: inline-block;background-color: #000;padding: 0 2%;margin: 10px 2%;}
+.postedby a {margin: 10px;padding:0;float: left;}
+.postedby ul {margin: 0;padding:0;}
+
+.sidebar aside {margin:0 5px;padding: 10px 10px;  background-color: #222;box-shadow: 0px 4px 8px #000;}
+.sidebar li.widget {border-bottom:5px solid #fff;}
+
+
+
+@media (max-width: 1200px){
+
+}
+
+/* out */
+/* inline-block = float:left + clear both*/
+/*
+.floating-box {
+    float: left;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;
+}
+
+.after-box {
+    clear: left;
+}
+*/
+ /* equal == */
+ /*
+.floating-box {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;
+}
+*/
+/* out */
+/* inline-block = float:left + clear both*/
+/*
+.floating-box {
+    float: left;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;
+}
+
+.after-box {
+    clear: left;
+}
+*/
+ /* equal == */
+ /*
+.floating-box {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;
+}
+*/
+
+
+/**************************************************************************************/
+/**************************************************************************************/
+
+/*  slideshow */
+/*  slideshow */
+/*  slideshow */
+
+/*
+body{padding: 0;margin:0;}
+*/
+
 
 </style>
 
@@ -411,162 +790,3 @@ add_action('wp_head','css_customizer' );
 
 
 
-<?php 
-//select using radio
-function add_customizer($wp_customize){
-$wp_customize->add_section('example_section_one', array('title' => 'example_section_one' )); 
-$wp_customize->add_setting(
-    'logo_placement',
-    array(
-        'default' => 'gray',
-    )
-);
- 
-$wp_customize->add_control(
-    'logo_placement',
-    array(
-        'type' => 'radio',
-        'label' => 'Logo placement',
-        'section' => 'example_section_one',
-        'transport' => 'postMessage',
-        'choices' => array(
-            'GRAY' => 'gray',
-            'blue' => 'BLUE',
-            'red' => 'RED',
-            'green'=>'GREEN',
-            'yellow'=>'YELLOW',
-            'white'=>'WHITE',
-            'black'=>'BLACK'
-        ),
-    )
-);
-
-
-
-}
-
-
-add_filter('customize_register','add_customizer' );
-
-function add_css (){
-  $example_position = get_theme_mod( 'logo_placement','#666' );
-    if( $example_position != '' ) {
-        switch ( $example_position ) {
-            case 'gray':
-                // Do nothing. The theme already aligns the logo to the left
-                break;
-            case 'red':
-                echo '<style type="text/css">';
-                echo '.row{ background-color: red; }';
-                echo '</style>';
-                break;
-            case 'green':
-                echo '<style type="text/css">';
-                echo 'body{ background-color: #277552; }';
-                echo '.row {background-color: #0F1B16;}';
-                echo '.nav div > ul {background-color: #204836;}';
-                echo '.nav div a {background-color: #204836;}';
-                echo '.nav div > ul > li:nth-child(n+4){background-color: #204836;}';
-                echo '.nav div > ul > li:nth-child(n+4) >a {background-color:#204836;}';
-                echo '.page .rect {background-color: #0F1B16;}';
-                echo '.sidebar aside {background-color:#0F1B16;}';       
-                echo '.footer1 {background-color:#0F1B16;}';       
-                echo '.footer2 {background-color:#0F1B16;}';       
-                echo '.footer3 {background-color:#0F1B16;}';       
-                echo '</style>';
-                break;
-            case 'black':
-                echo '<style type="text/css">';
-                echo 'body{ background-color: #000; }';
-                echo '.row {background-color: #111;}';
-                echo '.nav div > ul {background-color: #999;}';
-                echo '.nav div a {background-color: #999;}';
-                echo '.nav div > ul > li:nth-child(n+4){background-color: #999;}';
-                echo '.nav div > ul > li:nth-child(n+4) >a {background-color:#999;}';       
-                echo '.page .rect {background-color: #000;}';       
-                echo '.sidebar aside {background-color: #000;}';       
-                echo '.footer1 {background-color: #000;}';       
-                echo '.footer2 {background-color: #000;}';       
-                echo '.footer3 {background-color: #000;}';
-                echo '</style>';
-                break;
-            case 'white':
-                echo '<style type="text/css">';
-                echo 'body{ background-color: #fff; }';
-                echo '.row {background-color: #fff;}';
-                echo '.nav div > ul {background-color: #000;}';
-                echo '.nav div a {background-color: #000;}';
-                echo '.nav div > ul > li:nth-child(n+4){background-color: #000;}';
-                echo '.nav div > ul > li:nth-child(n+4) >a {background-color:#000;}';       
-                echo '.page .rect {background-color: #fff;}';
-                echo '.sidebar aside {background-color: #fff;}';       
-                echo '.footer1 {background-color: #fff;}';       
-                echo '.footer2 {background-color: #fff;}';       
-                echo '.footer3 {background-color: #fff;}';
-                echo '</style>';
-                break;
-            case 'orange':
-                echo '<style type="text/css">';
-                echo 'body{ background-color: #FBD858; }';
-                echo '.row {background-color: #FEF8D8;}';
-                echo '.nav div > ul {background-color: #D9C588;}';
-                echo '.nav div a {background-color: #D9C588;}';
-                echo '.nav div > ul > li:nth-child(n+4){background-color: #D9C588;}';
-                echo '.nav div > ul > li:nth-child(n+4) >a {background-color:#D9C588;}';       
-                echo '</style>';
-                break;
-            default  :  
-                echo '<style type="text/css">';
-                echo 'body{ background-color:#222; }';
-                echo '</style>';
-                break;
-                          case 'yellow':
-          ?>
-          <script type="text/javascript">
-                        $('body').css('background-color', '#999' );
-              
-          </script>
-          <?php  
-        break;  
-        }
-    }
-
-/*  $example_position2 = get_theme_mod( 'logo_placement2','#666' );
-    if( $example_position2 != '' ) {
-        switch ( $example_position2 ) {
-            case 'gray':
-                // Do nothing. The theme already aligns the logo to the left
-                break;
-            case 'red':
-                echo '<style type="text/css">';
-                echo '.row{ background-color: red; }';
-                echo '</style>';
-                break;
-            case 'blue':
-                echo '<style type="text/css">';
-                echo 'body{ background-color: #0F1B16; }';
-                echo '</style>';
-                break;
-            case 'orange':
-                echo '<style type="text/css">';
-                echo 'body{ background-color: #FBD858; }';
-                echo '</style>';
-                break;
-            default  :  
-                echo '<style type="text/css">';
-                echo 'body{ background-color:#222; }';
-                echo '</style>';
-                break;
-        }
-    }
-*/
-}
-
-add_filter('wp_head','add_css' );
-add_filter('wp_footer','add_css' );
-
-
-
-
-
- ?>

@@ -1,20 +1,20 @@
 <?php 
-require_once('src/style.php');
-require_once('src/changetheme.php');
-// require_once('src/style/change-all-white.php');
-// require_once('src/style/change-all-red.php');
-// require_once('src/style/change-all-green.php');
-// require_once('src/style/change-all-blue.php');
-// require_once('src/style/change-all-black.php');
-require_once('src/layout.php');
-require_once('src/addbar.php');
-require_once('src/test.php');
-require_once('src/class_customizer_js.php');
-require_once('src/admin_style.php');
-require_once('src/woocommerce_action.php');
-require_once('src/postperpage.php');
-require_once('src/script.php');
-require_once('src/head.php');
+require_once('functions/style.php');
+require_once('functions/changetheme.php');
+// require_once('functions/style/change-all-white.php');
+// require_once('functions/style/change-all-red.php');
+// require_once('functions/style/change-all-green.php');
+// require_once('functions/style/change-all-blue.php');
+// require_once('functions/style/change-all-black.php');
+require_once('functions/layout.php');
+require_once('functions/addbar.php');
+require_once('functions/test.php');
+require_once('functions/class_customizer_js.php');
+require_once('functions/admin_style.php');
+require_once('functions/woocommerce_action.php');
+require_once('functions/postperpage.php');
+require_once('functions/script.php');
+//require_once('functions/head.php');
 
 
 

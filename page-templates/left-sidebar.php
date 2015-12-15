@@ -1,12 +1,16 @@
 <?php
 /*
-Template Name: Archives
-*/
+ * Template Name: 2 column Left Sidebar
+ * Description: Page template without sidebar
+ */
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-      	<?php get_template_part('page-templates/head_html');?>
+	<!--script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/themes/ui-darkness/jquery-ui.css"></script-->
+
+		<?php get_template_part('page-templates/head_html'); ?>
 
 </head>
 <body <?php body_class( ); ?> >
@@ -22,35 +26,25 @@ Template Name: Archives
 		<!-- 2 ) main -->
 		<div class="main">
 		<div class="row">
-			<!-- 2-1 ) page part -->
-			<div class="page">
-				<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 ">
-					
-				<?php the_post(); ?>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-		
-		<?php get_search_form(); ?>
-		
-		<h2>Archives by Month:</h2>
-		<ul>
-			<?php wp_get_archives('type=monthly'); ?>
-		</ul>
-		
-		<h2>Archives by Category Subject:</h2>
-		<ul>
-			 <?php wp_list_categories(); ?>
-		</ul>	
-				</div>
-		    </div>
-
-                	<?php /*get_template_part('comments');*/?>
-		    <!-- 2-2 ) sidebar part if you want -->
+			
+		    <!-- 2-2 ) left sidebar  -->
 			<div class="sidebar">
 				<div class=" col-xs-3 col-lg-3 col-md-12 col-sm-12 ">
                 	<?php get_sidebar(); ?>
                 	<br/>
 				</div>
 			</div>
+			<!-- end sidebar part -->
+
+			<!-- 2-1 ) page part -->
+			<div class="page">
+				<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 ">
+					
+						<?php get_template_part('page-templates/main_page'); ?>
+
+				</div>
+		    </div>
+			<!-- end page part -->            
 
 		</div>
 		<!--End Row -->
@@ -70,7 +64,7 @@ Template Name: Archives
 	
 	</div>
 	<!-- End Container-->
-  	<?php get_template_part('page-templates/script');?>
+	<?php get_template_part('page-templates/script'); ?>
 
 </body>
 </html>

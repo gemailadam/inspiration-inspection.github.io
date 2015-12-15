@@ -11,3 +11,61 @@
 * License: GNU General Public License v2.0 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+/* new class with qwe_ prefix because problems with wordpress class and others like jquery css */
+.comment-form-comment textarea {padding: 10px;color: #222; width:80%;border:4px solid #ff7f00; border-radius:20px 0px 20px 0;float:none;display: block;margin: 0px;}
+.comment-form-comment label {font-size: 140%; margin: 20px ;box-shadow: 5px 5px 8px #000;float: none;padding:5px 20px;}
+.form-submit input{box-shadow: 5px 5px 8px #000;color: #000;}
+#reply-title {text-shadow: 5px 5px 8px #000;}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+/*update*/
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/*update group nicer name*/
+.group:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+	}
+* html .group             { zoom: 1; } /* IE6 */
+*:first-child+html .group { zoom: 1; } /* IE7 */
+
+/*update group */
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+} 
+.group:after {
+    clear: both;
+}
+.group {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+/* from    https://css-tricks.com/snippets/css/clear-fix/ */

@@ -101,6 +101,8 @@ function add_css (){
                         box-shadow: 0px 9px 0px #84261a;
                 }';    
 
+                echo '#searchsubmit {color: #222;}';
+                echo '#s {color: #222;}';
                 //footer
 
                 echo '.footer1 {background-color: #222;box-shadow: 0px 4px 8px #000;}';
@@ -162,7 +164,8 @@ echo '.galleryNavigationBullets a:link{background: #fff;}';
                 echo '.push_button{color:#FFF;border:solid 1px #D94E3B;background:#cb3b27;
                     -webkit-box-shadow: 0px 9px 0px #84261a;-moz-box-shadow: 0px 9px 0px #84261a;
                         box-shadow: 0px 9px 0px #84261a;}';    
-
+                echo '#searchsubmit {color: #222;}';
+                echo '#s {color: #222;}';
                 //footer
                 echo '.footer1 {background-color: #eee;box-shadow: 0px 4px 8px #000;}';
                 echo '.footer2 {background-color: #eee;box-shadow: 0px 4px 8px #000;}';
@@ -219,7 +222,8 @@ echo '.galleryNavigationBullets a:link{background: #fff;}';
                 // }
 
                 // //sidebar
-
+                echo '#searchsubmit {color: #222;}';
+                echo '#s {color: #222;}';
                 // .sidebar aside {background-color: #000;box-shadow: 0px 4px 8px #000;}
                 // .sidebar li.widget {border-bottom:5px solid #fff;}
                 // .push_button{
@@ -309,7 +313,8 @@ echo ".postedby a:link {color: white;}";
                         -moz-box-shadow: 0px 9px 0px #84261a;
                         box-shadow: 0px 9px 0px #84261a;
                 }';    
-
+                echo '#searchsubmit {color: #222;}';
+                echo '#s {color: #222;}';
                 //footer
 
                 echo '.footer1 {background-color: #000;box-shadow: 0px 4px 8px #000;}';
@@ -372,7 +377,8 @@ echo '.galleryNavigationBullets a:link{background: #333;}';
                 echo '.push_button{color:#FFF;border:solid 1px #D94E3B;background:#cb3b27;
                     -webkit-box-shadow: 0px 9px 0px #84261a;-moz-box-shadow: 0px 9px 0px #84261a;
                         box-shadow: 0px 9px 0px #84261a;}';    
-
+                echo '#searchsubmit {color: #222;}';
+                echo '#s {color: #222;}';
                 //footer
                 echo '.footer1 {background-color: #eee;box-shadow: 0px 4px 8px #000;}';
                 echo '.footer2 {background-color: #eee;box-shadow: 0px 4px 8px #000;}';
@@ -526,7 +532,8 @@ echo ".postedby a:link {color: white;}";
                 //         -moz-box-shadow: 0px 9px 0px #84261a;
                 //         box-shadow: 0px 9px 0px #84261a;
                 // }    
-
+                echo '#searchsubmit {color: #222;}';
+                echo '#s {color: #222;}';
                 // //footer
 
                 // .footer1 {background-color: #000;box-shadow: 0px 4px 8px #000;}

@@ -1,5 +1,5 @@
 <?php 
-/*page.php
+/*woocommerce from page.php
    The page template. 
    Used when an individual Page is queried. 
 */
@@ -14,7 +14,7 @@ header("Pragma: no-cache");
 <html <?php language_attributes(); ?>>
 <head>
 
-		<?php get_template_part('head_html'); ?>
+		<?php get_template_part('page-templates/head_html'); ?>
 
 </head>
 <body <?php body_class( ); ?> >
@@ -34,8 +34,7 @@ header("Pragma: no-cache");
 					<div class="page">
 						<div class="col-lg-9 col-md-12 col-sm-12 col-xs-9">
 							
-
-						<?php get_template_part('main_woocommerce'); ?>
+						<?php woocommerce_content(); ?>
 
 						</div>
 					</div>
@@ -62,7 +61,7 @@ header("Pragma: no-cache");
 		</div>
 		<!-- End Container-->
 	
-	<?php get_template_part('script'); ?>
+	<?php get_template_part('page-templates/script'); ?>
 
 	</body>
 	</html>

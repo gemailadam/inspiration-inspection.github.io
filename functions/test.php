@@ -1,126 +1,59 @@
-<?php
-function themename_customize_register($wp_customize){
-    
-    $wp_customize->add_section('themename_color_scheme', array(
-        'title'    => __('Color Scheme', 'themename'),
-        'priority' => 120,
-    ));
-    //  =============================
-    //  = Text Input                =
-    //  =============================
-    $wp_customize->add_setting('themename_theme_options[text_test]', array(
-        'default'        => 'q !',
-        'capability'     => 'edit_theme_options',
-        'type'           => 'option',
-    ));
-    $wp_customize->add_control('themename_text_test', array(
-        'label'      => __('Text Test', 'themename'),
-        'section'    => 'themename_color_scheme',
-        'settings'   => 'themename_theme_options[text_test]',
-    ));
-    //  =============================
-    //  = Radio Input               =
-    //  =============================
-    $wp_customize->add_setting('themename_theme_options[color_scheme]', array(
-        'default'        => 'value2',
-        'capability'     => 'edit_theme_options',
-        'type'           => 'option',
-    ));
-    $wp_customize->add_control('themename_color_scheme', array(
-        'label'      => __('Color Scheme', 'themename'),
-        'section'    => 'themename_color_scheme',
-        'settings'   => 'themename_theme_options[color_scheme]',
-        'type'       => 'radio',
-        'choices'    => array(
-            'value1' => 'Choice 1',
-            'value2' => 'Choice 2',
-            'value3' => 'Choice 3',
-        ),
-    ));
-    //  =============================
-    //  = Checkbox                  =
-    //  =============================
-    $wp_customize->add_setting('themename_theme_options[checkbox_test]', array(
-        'capability' => 'edit_theme_options',
-        'type'       => 'option',
-    ));
-    $wp_customize->add_control('display_header_text', array(
-        'settings' => 'themename_theme_options[checkbox_test]',
-        'label'    => __('Display Header Text'),
-        'section'  => 'themename_color_scheme',
-        'type'     => 'checkbox',
-    ));
-    //  =============================
-    //  = Select Box                =
-    //  =============================
-     $wp_customize->add_setting('themename_theme_options[header_select]', array(
-        'default'        => 'value2',
-        'capability'     => 'edit_theme_options',
-        'type'           => 'option',
-    ));
-    $wp_customize->add_control( 'example_select_box', array(
-        'settings' => 'themename_theme_options[header_select]',
-        'label'   => 'Select Something:',
-        'section' => 'themename_color_scheme',
-        'type'    => 'select',
-        'choices'    => array(
-            'value1' => 'Choice 1',
-            'value2' => 'Choice 2',
-            'value3' => 'Choice 3',
-        ),
-    ));
-    //  =============================
-    //  = Image Upload              =
-    //  =============================
-    $wp_customize->add_setting('themename_theme_options[image_upload_test]', array(
-        'default'           => 'image.jpg',
-        'capability'        => 'edit_theme_options',
-        'type'           => 'option',
-    ));
-    $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'image_upload_test', array(
-        'label'    => __('Image Upload Test', 'themename'),
-        'section'  => 'themename_color_scheme',
-        'settings' => 'themename_theme_options[image_upload_test]',
-    )));
-    //  =============================
-    //  = File Upload               =
-    //  =============================
-    $wp_customize->add_setting('themename_theme_options[upload_test]', array(
-        'default'           => 'abcdefg',
-        'capability'        => 'edit_theme_options',
-        'type'           => 'option',
-    ));
-    $wp_customize->add_control( new WP_Customize_Upload_Control($wp_customize, 'upload_test', array(
-        'label'    => __('Upload Test', 'themename'),
-        'section'  => 'themename_color_scheme',
-        'settings' => 'themename_theme_options[upload_test]',
-    )));
-    //  =============================
-    //  = Color Picker              =
-    //  =============================
-    $wp_customize->add_setting('themename_theme_options[link_color]', array(
-        'default'           => '000',
-        'sanitize_callback' => 'sanitize_hex_color',
-        'capability'        => 'edit_theme_options',
-        'type'           => 'option',
-    ));
-    $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'link_color', array(
-        'label'    => __('Link Color', 'themename'),
-        'section'  => 'themename_color_scheme',
-        'settings' => 'themename_theme_options[link_color]',
-    )));
-    //  =============================
-    //  = Page Dropdown             =
-    //  =============================
-    $wp_customize->add_setting('themename_theme_options[page_test]', array(
-        'capability'     => 'edit_theme_options',
-        'type'           => 'option',
-    ));
-    $wp_customize->add_control('themename_page_test', array(
-        'label'      => __('Page Test', 'themename'),
-        'section'    => 'themename_color_scheme',
-        'type'    => 'dropdown-pages',
-        'settings'   => 'themename_theme_options[page_test]',
-    ));
+<?php 
+
+// Removes from post and pages
+
+/*add_action('init', 'remove_comment_support', 100);
+
+function remove_comment_support() {
+    remove_post_type_support( 'post', 'comments' );
+    remove_post_type_support( 'page', 'comments' );
 }
-add_action('customize_register', 'themename_customize_register');
+*/
+function qwe_comments(){
+comment_form( $args, $post_id ); 
+$args = array(
+  'id_form'           => 'commentform',
+  'id_submit'         => 'submit',
+  'class_submit'      => 'submit',
+  'name_submit'       => 'submit',
+  'title_reply'       => __( 'Leave a Reply' ),
+  'title_reply_to'    => __( 'Leave a Reply to %s' ),
+  'cancel_reply_link' => __( 'Cancel Reply' ),
+  'label_submit'      => __( 'Post Comment' ),
+  'format'            => 'xhtml',
+
+  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) .
+    '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
+    '</textarea></p>',
+
+  'must_log_in' => '<p class="must-log-in">' .
+    sprintf(
+      __( 'You must be <a href="%s">logged in</a> to post a comment.' ),
+      wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
+    ) . '</p>',
+
+  'logged_in_as' => '<p class="logged-in-as">' .
+    sprintf(
+    __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
+      admin_url( 'profile.php' ),
+      $user_identity,
+      wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
+    ) . '</p>',
+
+  'comment_notes_before' => '<p class="comment-notes">' .
+    __( 'Your email address will not be published.' ) . ( $req ? $required_text : '' ) .
+    '</p>',
+
+  'comment_notes_after' => '<p class="form-allowed-tags">' .
+    sprintf(
+      __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s' ),
+      ' <code>' . allowed_tags() . '</code>'
+    ) . '</p>',
+
+  'fields' => apply_filters( 'comment_form_default_fields', $fields ),
+);
+
+}
+add_action('init', 'qwe_comments', 100);
+
+ ?>

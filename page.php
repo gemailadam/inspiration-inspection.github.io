@@ -11,10 +11,18 @@ header("Cache-Control: no-cache");
 header("Pragma: no-cache");
 */?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<!--[if IE 7]>
+<html class="ie ie7" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html <?php language_attributes(); ?> >
+<!--<![endif]-->
 <head>
 
-		<?php get_template_part('head_html'); ?>
+		<?php get_template_part('page-templates/head_html'); ?>
 
 </head>
 <body <?php body_class( ); ?> >
@@ -35,7 +43,7 @@ header("Pragma: no-cache");
 						<div class="col-lg-9 col-md-12 col-sm-12 col-xs-9">
 							
 
-						<?php get_template_part('main_page'); ?>
+						<?php get_template_part('page-templates/main_page'); ?>
 
 						</div>
 					</div>
@@ -67,7 +75,7 @@ header("Pragma: no-cache");
 		</div>
 		<!-- End Container-->
 	
-	<?php get_template_part('script'); ?>
+	<?php get_template_part('page-templates/script'); ?>
 
 	</body>
 	</html>

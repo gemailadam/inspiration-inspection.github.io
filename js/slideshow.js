@@ -1,9 +1,23 @@
 
 
-   $(".galleryPreviewImage > img:gt(0)").hide();
 
-        // fade out current slide (first), fade in next slide and move first slide to end
+  //variables
+  //var imageTotal=<?php echo $imageTotal; ?>;
+  var currentImage=1;
+  var thumbTotalWidth=0;
+
+    $('a.galleryBullets' + currentImage).addClass('active');
+
+
+    $(".galleryPreviewImage > img:gt(0)").hide();
+
+        //function to fade out current slide (first), fade in next slide and move first slide to end
+        // & add fade to connected description & button
+        // & add fade to connected bullets
         var nextSlide = function() { 
+       
+            $('a.galleryBullets' + currentImage).removeClass('active');
+            
             $(".galleryPreviewImage > img:first")
             .fadeOut(1000)
             .next()
@@ -11,22 +25,27 @@
             .end()
             .appendTo(".galleryPreviewImage");
 
-        }
-   $(".gallerydescription > div:gt(0)").hide();
-
-        var nextSlidedescription = function() { 
             $('.gallerydescription > div:first-child')
             .fadeOut(1000)
             .next()
             .fadeIn(1000)
             .end()
             .appendTo(".gallerydescription");
-          }
-        var nextSlideTimer = setInterval(nextSlidedescription,  9000);
+        
+
+            currentImage++;
+            $('a.galleryBullets' + currentImage).addClass('active');
+            if (currentImage==9){currentImage=1;$('a.galleryBullets' + currentImage).addClass('active');}
+
+        }
 
         var nextSlideTimer = setInterval(nextSlide,  9000);
 
-        // fade out current slide (first) and move last slide to top and fade in
+        $(".gallerydescription > div:gt(0)").hide();
+
+        // function to move previous image 
+        // & description & button 
+        // & bullets
         $("a.previousslidearrow").click(function() {
             clearInterval(nextSlideTimer);
 
@@ -38,8 +57,17 @@
 
             nextSlideTimer = setInterval(nextSlide, 9000)
             setTimeout(nextSlideTimer, 9000)
+
+            $('a.galleryBullets' + currentImage).removeClass('active');
+            currentImage--;
+            $('a.galleryBullets' + currentImage).addClass('active');
+            if (currentImage==0){currentImage=8;$('a.galleryBullets' + currentImage).addClass('active');}
+
         });
 
+        // function to move next image 
+        // & description & button 
+        // & bullets
         $("a.nextslidearrow").click(function() {
             clearInterval(nextSlideTimer);
 
@@ -52,6 +80,12 @@
 
             nextSlideTimer = setInterval(nextSlide, 9000)
             setTimeout(nextSlideTimer, 9000)
+
+            $('a.galleryBullets' + currentImage).removeClass('active');
+            currentImage++;
+            $('a.galleryBullets' + currentImage).addClass('active');
+            if (currentImage==9){currentImage=1;$('a.galleryBullets' + currentImage).addClass('active');}
+
         });
 
         $(".galleryPreviewImage").hover(function() {
@@ -91,6 +125,34 @@ $('.circrarrow').hover(function(){
     $(this).css({'background-color' : 'red', 'border' : '1px solid black'});
 });
 
+
+        $('a.galleryBullets1').click(function(){
+            $('a.galleryBullets' + currentImage).removeClass('active');
+            currentImage=1;
+            $('a.galleryBullets' + currentImage).addClass('active');
+    
+            clearInterval(nextSlideTimer);
+
+            nextSlideTimer = setInterval(nextSlide, 9000)
+            setTimeout(nextSlideTimer, 9000)
+            // $(".galleryPreviewImage > img:first")
+            // .fadeOut(1000)
+            // .next()
+            // .fadeIn(1000)
+            // .end()
+            // .appendTo(".galleryPreviewImage");
+
+            // nextSlideTimer = setInterval(nextSlide, 9000)
+            // setTimeout(nextSlideTimer, 9000)
+
+        });
+
+
+
+
+
+
+
 $(window).on('scroll', function()
 {
   stop = Math.round($(window).scrollTop());
@@ -106,15 +168,16 @@ $(window).on('scroll', function()
 }
 );
 
-/*
-  //variables
-  //var imageTotal=<?php echo $imageTotal; ?>;
-  var currentImage=1;
-  var thumbTotalWidth=0;
 
-$('a.galleryBullets' + currentImage).addClass('active');
+
+
+
+/*
+
 $('a.thumbnilsimage' + currentImage).addClass('active');
 $('div.description'  + currentImage).addClass('visible');
+
+
 
     //Set width for thumbnail container
     $(window).load(function(){

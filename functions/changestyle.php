@@ -1,15 +1,5 @@
 <?php 
-// built in sections 
-/*
-    title_tagline - Site Title & Tagline (and Site Icon in WP 4.3+)
-    colors - Colors
-    header_image - Header Image
-    background_image - Background Image
-    nav - Navigation
-    static_front_page - Static Front Page
-*/
-
-function customize_theme($wp_customize){
+function qwe_customize_theme($wp_customize){
 
 // add panel
     $wp_customize->add_panel( 'panel_id', array(
@@ -20,20 +10,75 @@ function customize_theme($wp_customize){
     'description'    => 'ok ok ok ',
 ));
 
-//background color
-    $wp_customize->add_section('Section_BG_ID',array(
-        'title' =>'Background' ,
-        'description' => 'Change background and container colors or images',
+
+    $wp_customize->add_section('colors',array(
+        'title' =>'colors' ,
+        'description' => 'hesham description here',
         'priority' => '1' ));
 
-    $wp_customize->add_setting('Background_COLOR_Settings_ID',array('default' => '' ));
+
+//HTML color
+
+    $wp_customize->add_setting('HTML_COLOR_Settings_ID',array('default' => '#fff' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'HTML_COLOR_Settings_ID',array(
+        'label' =>'all site font default color',
+        'section' => 'colors' ,
+        'settings' => 'HTML_COLOR_Settings_ID' )));
+
+//body color
+
+    $wp_customize->add_setting('Background_COLOR_Settings_ID',array('default' => '#222' ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'Background_COLOR_Settings_ID',array(
         'label' =>'Background Color',
         'description' =>'Change Background Color',
-        'section' => 'Section_BG_ID' ,
+        'section' => 'colors' ,
         'settings' => 'Background_COLOR_Settings_ID' )));
 
+//.row color
+    $wp_customize->add_setting('row_ID',array('default' => '#222' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'row_ID',array(
+        'label' =>'Posts Color',
+        'description' =>'Change posts and pages Background Color',
+        'section' => 'colors' ,
+        'settings' => 'row_ID' )));
+
+//page links [a]
+// a link color
+
+    $wp_customize->add_setting('a_id',array('default' => '' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_id',array(
+        'label' =>'linls colors',
+        'description' =>'all links Colors',        
+        'section' => 'colors' ,
+        'settings' => 'a_id' )));
+
+// a visited color
+
+    $wp_customize->add_setting('a_visited_id',array('default' => '' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_visited_id',array(
+        'label' =>'Visited Links Colors',
+        'description' =>'all visisted links Colors',        
+        'section' => 'colors' ,
+        'settings' => 'a_visited_id' )));
+
+
+// a Hover color
+
+    $wp_customize->add_setting('a_hover_id',array('default' => '' ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_hover_id',array(
+        'label' =>'Hover Links Colors',
+        'description' =>'all links Colors',                
+        'section' => 'colors' ,
+        'settings' => 'a_hover_id' )));
+
+
+/*
 //background image
     //section Background , id = Section_BG_CLR_ID
 
@@ -65,18 +110,6 @@ function customize_theme($wp_customize){
 
 //    
 
-//HTML font color
-    $wp_customize->add_section('Section_CLR_ID',array(
-        'title' =>'CLR' ,
-        'description' => 'hesham description here',
-        'priority' => '2' ));
-
-    $wp_customize->add_setting('HTML_COLOR_Settings_ID',array('default' => '' ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'HTML_COLOR_Settings_ID',array(
-        'label' =>'Pragraphs COLOR',
-        'section' => 'Section_CLR_ID' ,
-        'settings' => 'HTML_COLOR_Settings_ID' )));
 
 // a color
    $wp_customize->add_setting('a_color_id',array('default' => '' ));
@@ -88,33 +121,6 @@ function customize_theme($wp_customize){
 
 
 
-// a link color
-
-    $wp_customize->add_setting('a_link_color_id',array('default' => '' ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_link_color_id',array(
-        'label' =>'linls colors',
-        'section' => 'Section_CLR_ID' ,
-        'settings' => 'a_link_color_id' )));
-
-// a visited color
-
-    $wp_customize->add_setting('a_visited_color_id',array('default' => '' ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_visited_color_id',array(
-        'label' =>'Visited Links Colors',
-        'section' => 'Section_CLR_ID' ,
-        'settings' => 'a_visited_color_id' )));
-
-
-// a Hover color
-
-    $wp_customize->add_setting('a_hover_color_id',array('default' => '' ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'a_hover_color_id',array(
-        'label' =>'Hover Links Colors',
-        'section' => 'Section_CLR_ID' ,
-        'settings' => 'a_hover_color_id' )));
 
 // site title visited color
     
@@ -138,55 +144,65 @@ function customize_theme($wp_customize){
         'label' =>'navigation background color',
         'section' => 'Section_nav_ID' ,
         'settings' => 'nav_ul_bg_color_id' )));
+*/
+}
 
+add_action('customize_register','qwe_customize_theme');
 
+//************************************************************************************************
 
-$wp_customize->add_section('TesT_ID',array('title'=>'TEST'));
-$wp_customize->add_setting('powered_by',array('default' => 'gray',));
-$nbn='gray';
-if($nbn=$bnb){
-    $fbf='#777'; 
-} 
-$bnb=$wp_customize->add_control('powered_by',array(
+//select using radio
+function qwe_add_customizer($wp_customize){
+//$wp_customize->add_section('colors', array('title' => 'choose theme colors' )); 
+$wp_customize->add_setting('logo_placement',array('default' => 'gray'));
+ 
+$wp_customize->add_control(
+    'logo_placement',
+    array(
+        'description' =>'Choose Custome theme Colors made by me if you like',        
+        'settings' => 'logo_placement', 
         'type' => 'select',
-        'label' => 'This site is powered by:',
-        'section' => 'TesT_ID',
+        'label' => 'Theme colors',
+        'priority'=>1,
+        'section' => 'colors',
+        'transport' => 'postMessage',
         'choices' => array(
+            'gray' => 'gray',
             'blue' => 'BLUE',
             'red' => 'RED',
-            'green' => 'GREEN',
-            'gray' => 'GRaY',
-            'blackwhite' => 'BLACKWHITE',
-            'whiteblack' => 'WHITEBLACK',
+            'green'=>'GREEN',
+            'yellow'=>'YELLOW',
+            'white'=>'white',
+            'black'=>'BLACK'
         ),
     )
 );
 
-
 }
 
-add_action('customize_register','customize_theme');
+add_filter('customize_register','qwe_add_customizer' );
+
+//*************************************************************************************************************
 
 
-
-function threeDaVinci_colors_choices(){
-
-echo '<select name="" id="">';
-    echo '<option value="blue">Blue</option>';
-    echo '<option value="red">Blue</option>';
-echo '</select>';
-}
-
-function css_customizer(){
-
+function qwe_select(){    
 ?>
+                
+                <style type="text/css">
 
+                /*roots.css*/
+                html {color: <?php echo get_theme_mod('HTML_COLOR_Settings_ID','#ff7f00');?>;}
+                body {background-color: <?php echo get_theme_mod('Background_COLOR_Settings_ID','#222')?>;}
+                a:link {color: <?php echo get_theme_mod('a_id','#fff');?>;}
+                a:visited {color: <?php echo get_theme_mod('a_visited_id','#aaa');?>;}
+                a:hover {color: <?php echo get_theme_mod('a_hover_id','#999');?>;}
+                .row {background-color: <?php echo get_theme_mod('row_ID','#222');?>;}
 
-<style type="text/css">
+                
 
 /* roots.css */
 html {
-  color:white;
+  /*color:white;*/
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -200,14 +216,14 @@ html p{color: #fff;}
 
 
 body {
-    background-color: #222;
-    padding:0;margin:0;
+/*    background-color: #222;
+*/    padding:0;margin:0;
 
  }
-a:link {color: #fff;}
+/*a:link {color: #fff;}
 a:visited {color: #aaa;}
 a:hover {color: #999;}
-
+*/
 
 ul,li {list-style: none;padding: 0;margin: 0;}
 
@@ -217,8 +233,8 @@ ul,li {list-style: none;padding: 0;margin: 0;}
 
 .gap {clear:both;}
 .container { } 
-.row {background-color: #222;}
-
+/*.row {background-color: #222;}
+*/
 /* header.css*/
 section.site-title a:visited {color: #fff;}
 section.site-title a {
@@ -540,6 +556,7 @@ div.page .rect {
 
 div.sidebar aside {margin:0 5px;padding: 10px 10px;  background-color: #222;box-shadow: 0px 4px 8px #000;}
 .sidebar li.widget {border-bottom:5px solid #fff;}
+.sidebar li h2.widgettitle {color: #fff;}
 
 /* new 20151205 */
 
@@ -773,9 +790,68 @@ body{padding: 0;margin:0;}
 
 <?php
 }
-add_action('wp_head','css_customizer' );
+add_filter('wp_head','qwe_select' );
+
+//******************************************************************************************************
+
+/*
+array
+(
+    [event] => SIGGRAPH
+    [city] => San Francisco
+    [state] => CA
+)
+//+++++++++++++++++++++++++++++++++++++
+<?php
+$cars = array("Volvo", "BMW", "Toyota");
+echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+?> 
+//+++++++++++++++++++++++++++++++++++++
+ $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+//or:
+$age['Peter'] = "35";
+$age['Ben'] = "37";
+$age['Joe'] = "43";
+
+//Example
+<?php
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+echo "Peter is " . $age['Peter'] . " years old.";
+?>  
+//++++++++++++++++++++++++++++++++++++++++
+array(0 =>'HTML_COLOR_Settings_ID', 1 => 'BMW', 2 => 'Toyota'); 
+*/
+function qwe_switch_css (){
+  $example_position = get_theme_mod( 'logo_placement');
+    if( $example_position != '' ) {
+        switch ( $example_position ) {
+            case 'gray':
+ //$clr = array('HTML_COLOR_Settings_ID', 'BMW', 'Toyota'); 
+ // $dclr = array('#fff', '#fff', '#aaa', '#999', '#222', '#222', '#fff', '#'
+ // 				, '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'
+ // 				, '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'
+ // 				, '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'
+ // 				); 
+
+                qwe_select();
+                break;
+
+           case 'black':
+                qwe_select();
+           		break;
+
+           case 'white':
+                qwe_select();
+                break;
+
+        
+        }
+    
+    }
+
+}
+
+add_filter('wp_head','qwe_switch_css' );
+//add_filter('wp_footer','add_css' );
+
  ?>
-
-
-
-

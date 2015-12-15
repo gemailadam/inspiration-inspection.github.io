@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: add 2 Footers
+ * Template Name: 2 footers 
  * Description: Page template without sidebar
  */
 ?>

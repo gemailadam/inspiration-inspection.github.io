@@ -1,6 +1,8 @@
 	<!--script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script-->
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<!--script src="//code.jquery.com/jquery-1.11.3.min.js"></script-->
+	<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.11.3.min.js"></script>
+	<!--script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script-->
+	<script src="<?php bloginfo('template_directory'); ?>/js/jquery-migrate-1.2.1.min.js"></script>
 	<!--script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/themes/ui-darkness/jquery-ui.css"></script-->
 
 
@@ -9,9 +11,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" ><!--for bootstrap to work good at IE-->
 	
 	<!-- IE 9 use different method than IE 7 & 8 to start good -->		
-	<!--[if it ie 9]>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+
+	<!--[if lt IE 9]>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
 	<![endif]-->
+
+	<!-- instead of the above if there is server internet connection only-->
+	<!--script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script-->
+
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
         
@@ -20,9 +27,10 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="stylesheet"  type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" /> 
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skelaton-dynamic.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skelaton-static.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skelaton-dynamic-row.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skelaton-static-row.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/elements.css"/>
-	<link rel='stylesheet' type='text/css' href="<?php bloginfo('template_directory')?>/style.css" />
 
 
 

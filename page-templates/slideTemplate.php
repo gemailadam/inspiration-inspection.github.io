@@ -1,3 +1,13 @@
+<?php 
+/*
+Template Name: slideshow
+*/
+?>
+<!Doctype html>
+<head>
+	<?php get_template_part('page-templates/head_html'); ?>
+</head>
+<body>
 <section class="site-title" >
 	<?php echo '<p><a href="'; the_permalink();echo '">'; bloginfo('title');echo '</a></p><br/>'; ?>
 	<?php echo '<a href="'; the_permalink();echo '">'; bloginfo('description');echo '</a>'; ?>
@@ -18,34 +28,6 @@
 				$description[6]='some description text 6 ';
 				$description[7]='some description text 7 ';
 				$description[8]='some description text 8 ';
-
-				$imagelink[1]='';
-				$imagelink[2]='';
-				$imagelink[3]='';
-				$imagelink[4]='';
-				$imagelink[5]='';
-				$imagelink[6]='';
-				$imagelink[7]='';
-				$imagelink[8]='';
-
-				// $num_of_images= echo get_theme_mod('num_of_images_id','8' );
-				// for ($w=1; $w < $num_of_images ; $w++) { 
-
-				// 	$name[$w]='imagelocation'.$w.'_id';
-
-				// 	if($w<=8){
-				// 	$imagelink[$w]=echo get_theme_mod( $name[$w], $default[$w]);
-				// 	}
-				// 	elseif ($w>8 && $<=16 ) {
-				// 	$imagelink[$w]=echo get_theme_mod( $name[$w], $default[$w-8]);
-				// 	}
-				// 	elseif ($w>16 && $<=24) {
-				// 	$imagelink[$w]=echo get_theme_mod( $name[$w], $default[$w-16]);
-				// 	}
-				// 	else{
-
-				// 	}			
-				//}
 			 
 			 ?>
 			 <div class="gallerycontainer">
@@ -67,24 +49,12 @@
 			 	<div class="galleryPreviewContainer">
 			 		<div class="galleryPreviewImage">
 			 			<?php 
-			 			 //for ($i=1; $i <= $imageTotal ; $i++) { 
-			 				// 	echo '<img class="previewImage'.$i.'" src="';
-			 				// 	bloginfo('template_directory');
-			 				// 	echo '/images/image'.$i.'.jpg"';
-			 				// 	echo 'height="auto" alt=""/>';
-			 				//echo '<img class="previewImage'.$i.'" src="'.$imagelink[$i].';
-
-			 			 //}
-
-			 			echo '<img class="previewImage1" src="';echo get_theme_mod('image1_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image1.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage2" src="';echo get_theme_mod('image2_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image2.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage3" src="';echo get_theme_mod('image3_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image3.gif');echo '" alt=""/>';
-			 			echo '<img class="previewImage4" src="';echo get_theme_mod('image4_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image4.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage5" src="';echo get_theme_mod('image5_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image5.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage6" src="';echo get_theme_mod('image6_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image6.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage7" src="';echo get_theme_mod('image7_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image7.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage8" src="';echo get_theme_mod('image8_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image8.jpg');echo '" alt=""/>';
-
+			 				for ($i=1; $i <= $imageTotal ; $i++) { 
+			 					echo '<img class="previewImage'.$i.'" src="';
+			 					bloginfo('template_directory');
+			 					echo '/images/image'.$i.'.jpg"';
+			 					echo 'height="auto" alt=""/>';
+			 				}
 			 			 ?>
 			 		</div>
 
@@ -136,3 +106,7 @@
 </section>
 <br/>
 <br/>
+<?php get_template_part('page-templates/main_page' ); ?>
+<?php get_footer(); ?>
+<?php get_template_part('page-templates/script' ); ?>
+</body>

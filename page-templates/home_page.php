@@ -19,6 +19,16 @@
 				$description[7]='some description text 7 ';
 				$description[8]='some description text 8 ';
 
+				$thumbdescription[1]='some description text 1 ';
+				$thumbdescription[2]='some description text 2 ';
+				$thumbdescription[3]='some description text 3  some description text 3  some description text 3 some description text 3 ';
+				$thumbdescription[4]='some description text 4 ';
+				$thumbdescription[5]='some description text 5 ';
+				$thumbdescription[6]='some description text 6 ';
+				$thumbdescription[7]='some description text 7 ';
+				$thumbdescription[8]='some description text 8 ';
+
+
 				$imagelink[1]='';
 				$imagelink[2]='';
 				$imagelink[3]='';
@@ -77,13 +87,13 @@
 			 			 //}
 
 			 			echo '<img class="previewImage1" src="';echo get_theme_mod('image1_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image1.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage2" src="';echo get_theme_mod('image2_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image2.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage3" src="';echo get_theme_mod('image3_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image3.gif');echo '" alt=""/>';
-			 			echo '<img class="previewImage4" src="';echo get_theme_mod('image4_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image4.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage5" src="';echo get_theme_mod('image5_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image5.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage6" src="';echo get_theme_mod('image6_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image6.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage7" src="';echo get_theme_mod('image7_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image7.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage8" src="';echo get_theme_mod('image8_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image8.jpg');echo '" alt=""/>';
+			 			echo '<img class="previewImage2" src="';echo get_theme_mod('image2_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image2.jpg');echo '" alt=""/>';
+			 			echo '<img class="previewImage3" src="';echo get_theme_mod('image3_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image3.gif');echo '" alt=""/>';
+			 			echo '<img class="previewImage4" src="';echo get_theme_mod('image4_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image4.jpg');echo '" alt=""/>';
+			 			echo '<img class="previewImage5" src="';echo get_theme_mod('image5_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image5.jpg');echo '" alt=""/>';
+			 			echo '<img class="previewImage6" src="';echo get_theme_mod('image6_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image6.jpg');echo '" alt=""/>';
+			 			echo '<img class="previewImage7" src="';echo get_theme_mod('image7_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image7.jpg');echo '" alt=""/>';
+			 			echo '<img class="previewImage8" src="';echo get_theme_mod('image8_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image8.jpg');echo '" alt=""/>';
 
 			 			 ?>
 			 		</div>
@@ -136,3 +146,35 @@
 </section>
 <br/>
 <br/>
+<section class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
+	
+			 	<div class="gallerythumContainer">
+			 			<?php 
+			 		
+		 				for ($t=2; $t <= 4; $t++) { 
+		 				?>
+		 				<div class="thumbwrapper">
+		 				<div class="galleryThumbnil">
+		 			
+		 				<?php	
+		 					echo '<img src="';echo get_template_directory_uri();echo '/images/image'.$t.'.jpg" alt=""/></a>'; 
+		 				?>
+					
+						</div>
+						
+						<?php
+						echo '<div class="des thumbdescription'.$t.'"><a><p>'.$thumbdescription[$t].'<p></a><br/><input type="submit" name="button'.$t.'" value="button';
+						?>
+
+						<?php  //echo get_theme_mod( 'name'.$t,'button'.$t ); ?>
+
+						<?php
+						echo '" /></div></div>';
+		 				}
+		 			
+		 			    ?>
+			 		
+			 		
+			 	</div>
+			 
+</section>

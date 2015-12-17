@@ -5,27 +5,8 @@ index.php
 */
  ?>
 
-<head>
-	<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
-	<!--script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/themes/ui-darkness/jquery-ui.css"></script-->
+		<?php get_template_part('page-templates/head_html'); ?>
 
-
-	<meta name="viewport" content="width=device-width,initial-scale=1"><!--mobil first media query to work at mobile good -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" ><!--for bootstrap to work good at IE-->
-	
-	<!-- IE 9 use different method than IE 7 & 8 to start good -->		
-	<!--[if it ie 9]>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<![endif]-->
-
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<link rel="stylesheet"  type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" /> 
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/skelaton-dynamic.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/elements.css"/>
-	<link rel='stylesheet' type='text/css' href="<?php bloginfo('template_directory')?>/css/style.php" />
-
-    <?php wp_head(); ?>
-</head>
 <body <?php body_class( ); ?> >
 <div class="container">
 

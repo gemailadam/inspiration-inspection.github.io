@@ -1,6 +1,26 @@
+<?php
+/*
+
+1- root_part_qwe
+2- header_part_qwe
+3- slideshow_part_qwe
+4- nav_part_qwe
+5- curasul_part_qwe
+6- page_part_qwe
+7- sidebare_part_qwe
+8- footer_part_qwe
+9- media_part_qwe
+10- media_part_lte_1200__qwe
+11- media_part_lte_992__qwe 
+12- media_part_lte_768__qwe
+13- media_part_lte_500__qwe
+14- media_part_lte_350__qwe
+15- custome_part_qwe
+
+
+*/
+?>
 <?php 
-
-
 require_once('_slideshow.php');
 
 
@@ -146,7 +166,7 @@ function qwe_select_css()
 
 <style type="text/css">
 
-/* roots.css */
+/* roots.css root_part_qwe */
 html {
   color:<?php echo get_theme_mod('html_id','#fff'); ?>;
   -webkit-text-size-adjust: 100%;
@@ -173,7 +193,7 @@ ul,li {list-style: none;padding: 0;margin: 0;}
 .row {background-color:<?php echo get_theme_mod('row_id','#222'); ?>;}
 
 
-/* header.css*/
+/* header.css header_part_qwe*/
 section.site-title a:visited {color:<?php echo get_theme_mod('site_title_visited_id','#fff'); ?>;}
 section.site-title a {
     color:<?php echo get_theme_mod('site_title_id','#fff'); ?>;
@@ -198,8 +218,17 @@ section.site-title p a {
     border:solid 1px #ccc;
     box-shadow: 0px 9px 0px #444;
     -webkit-box-shadow: 0px 9px 0px #444;
-        -moz-box-shadow: 0px 9px 0px #444 ;      
-    
+        -moz-box-shadow: 0px 9px 0px #444 ;   
+
+ /*  zoom: 1;
+   filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=10, OffY=-15, Color=#ff0000);
+
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#cccccc, Direction=0, Strength=3),
+    progid:DXImageTransform.Microsoft.Shadow(color=#cccccc, Direction=90, Strength=3),
+    progid:DXImageTransform.Microsoft.Shadow(color=#cccccc, Direction=180, Strength=3),
+     progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Direction=270 ,Strength=3);
+   
+ */   
 }
 
 /**/
@@ -228,7 +257,7 @@ img#logo {position: absolute;width:12%;margin-right:0px;margin-top: 10px;box-sha
 
 .circlarrow:hover {color: #ff7f00;}
 
-/* slideshow */
+/* slideshow slideshow_part_qwe */
 a,.galleryThumbnil img{
 transition:all 150 ms linear;
 -webkit-transition:all 150 ms linear;
@@ -394,7 +423,7 @@ a.nextslidearrow{
 
 
 
-/* navbar.css*/
+/* navbar.css nav_part_qwe*/
 .nav div {
     margin: 0px auto ;
     padding: 0px;
@@ -403,6 +432,17 @@ a.nextslidearrow{
     border-radius:2px 2px 30px 30px;
     border:solid 1px #ccc;
     box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
+
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=40)"; /* this works in IE8 only */
+    /*-ms-filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=145, Strength=3);/* this works in IE*/*/
+    /*-ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);/* this works in IE*/*/
+   /*zoom: 1;*/
+   /*filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=10, OffY=-15, Color=#ff0000);*/
+
+    /*-ms-filter: progid:DXImageTransform.Microsoft.Shadow(color=#cccccc, Direction=0, Strength=3),*/
+    /*progid:DXImageTransform.Microsoft.Shadow(color=#cccccc, Direction=90, Strength=3),*/
+    /*progid:DXImageTransform.Microsoft.Shadow(color=#cccccc, Direction=180, Strength=3),*/
+     /*progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Direction=270 ,Strength=3);*/
 
     }
 
@@ -471,7 +511,7 @@ a.nextslidearrow{
 .navbar-fixed-top{top:0;}
 
 
-/*page.css*/
+/*page.css page_part_qwe*/
 .page .rect img {width: 100%;height: auto;}
 
 div.page .rect {
@@ -504,16 +544,11 @@ div.page .rect {
 .rect .push_button{ border-top: solid 5px #fff;}
 .rect .push_button a:hover {color:#ccc;}
 
-/* 404 */
 
-.oops h1 {
-    color:#D94E3B;
-    padding: 10px 20px;margin:10px 10px;
-    box-shadow:2px 2px 4px #111;
-    text-shadow:2px 2px 4px #111;
-}
 
-/* sidebar.css*/
+
+
+/* sidebar.css sidebar_part_qwe*/
 
 div.sidebar aside {
     margin:0 5px;
@@ -557,8 +592,7 @@ div.sidebar aside {
 }
 
 
-/* footer.css */
-
+/* footer.css fopoter_part_qwe*/
 
 section.footer1 {
     margin:5px 2%;
@@ -599,7 +633,28 @@ section.footer3 li.widget:first-child {clear:left;}
 .fl-ri{float: right;}
 footer img {width: 100%;height: 100px; }
 
-/* sitemap.css */
+
+
+
+
+
+
+/* 404 404_part_qwe*/
+
+.oops h1 {
+    color:#D94E3B;
+    padding: 10px 20px;margin:10px 10px;
+    box-shadow:2px 2px 4px #111;
+    text-shadow:2px 2px 4px #111;
+}
+
+
+
+
+
+
+
+/* sitemap.css sitemap_part_qwe*/
 
 .wrapper{position: relative;width: 100%;}
 img.sitemap {
@@ -641,7 +696,8 @@ img.sitemapback {
 
 .maplinks table tr td {width: 20%;}
 .maplinks table tr {float: none;}
-#gmap{position: relative;}
+#gmap{position: relative;z-index: 1;}
+.map {z-index: 2;}
 .tabs {text-align: center;}
 .tabs a {
     color:#ff0033;
@@ -675,6 +731,104 @@ img.sitemapback {
 
 
 
+
+/* curasul_part_qwe */
+
+.gallerythumContainer {
+    margin:1% 4% 2% 4%;
+    padding: 1% 1%;
+    border-radius: 20px 20px 50px 50px;
+    float: left;
+    width: 90%;
+      -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow: inset 0 0 5px #000000 , 0 9px 5px #000000;
+    border: 1px solid #666;
+}
+
+.galleryThumbnil img {
+    margin:10px 2%;
+    padding: 2% 2%;
+    border-radius: 20px 20px 50px 50px;
+    width:92%;
+    float: left;
+      -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow: inset 0 0 5px #000000 , 0 9px 5px #000000;
+    border: 1px solid #666;
+     }
+.thumbwrapper{float: left;width: 33%;}
+
+
+/* media.css media_part_qwe */
+
+/* media_part_lte_768__qwe */
+
+@media (max-width: 768px){
+
+.gallerythumContainer {
+        margin:0px 1%;
+    padding: 1% 1%;
+    border-radius: 0px 0px 0px 0px;
+    float: left;
+    
+      -moz-box-shadow: 0 0 0 #000000;
+   -webkit-box-shadow: 0 0 0 #000000;
+   box-shadow:0 0 0 #000000 ;
+    border: 0px solid #666;
+}
+
+    .thumbwrapper {
+    margin:0px 1%;
+    padding: 1% 1%;
+    border-radius: 20px 20px 50px 50px;
+    float: left;
+    width:45%;
+      -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow: inset 0 0 5px #000000 , 0 9px 5px #000000;
+    border: 1px solid #666;
+     }
+
+}
+
+/* media_part_lte_500__qwe */
+
+@media (max-width: 500px){
+    .thumbwrapper {
+    margin:10px 1%;
+    padding: 1% 1%;
+    border-radius: 20px 20px 50px 50px;
+    width:92%;
+      -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow: inset 0 0 5px #000000 , 0 9px 5px #000000;
+    border: 1px solid #666;
+     }
+
+}
+.gallerythumContainer input {
+    margin-left: 4%;
+    /*margin-bottom: 0;*/
+           -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:0 5px 5px #000000 , 0 9px 5px #000000;
+    border: 1px solid #666;
+    color: #fff;
+    text-align: center;
+    background-color: #222;
+    width:30%;
+    height: 25px;
+    border-radius: 10px;
+}
+.des p{
+    margin:0px 4%;
+    padding: 0% 2%;
+    
+}
+
+/* media_part_lte_992__qwe */
+
 @media (max-width: 992px){
 .galleryPreviewarrow a {width: 60px;height: 60px;line-height: 60px;top:110px;}
 .gallerydescription > div{top:55%;}
@@ -682,6 +836,9 @@ img.sitemapback {
 .gallerydescription > div input{font-size:80%;}
 
 }
+
+/* media_part_lte_768__qwe */
+
 
 @media (max-width: 750px){
 .galleryPreviewarrow a {width: 50px;height: 50px;line-height: 50px;top:95px;}
@@ -746,18 +903,26 @@ section.site-title a {font-size: 70%;padding: 0 10px;text-shadow:0 0 0;}
 
 }
 
+
+/* media_part_lte_1200__qwe */
+
+
 @media (max-width: 1200px){
 
 }
 
-@media (max-width: 500px){
+
+/* media_part_lte_500__qwe */
+
+
+@media (max-width: 747px){
 .page h1 {margin-top:60px;}
 
 /* navbar.css*/
 .nav div {
     margin: 0px auto ;
     padding: 0px;
-    width: 60%; 
+    width: 30%; 
 position: absolute;
 
     }
@@ -789,7 +954,7 @@ display: inline-block;
 
     display: none;
 
-    border-radius:3px 3px 5px 30px;
+    border-radius:3px 3px 30px 5px;
     border:solid 1px #ccc;
     box-shadow: 0px 6px 0px #444,0px 20px 15px #111;
     text-shadow: 0px 7px 0 #333, 0px 6px 0 #333, 0 5px 0 #333,0 4px 0 #333, 0 3px 0 #333, 0 2px 0 #333, 0 1px 0 #333;
@@ -841,6 +1006,12 @@ display: inline-block;
 .nav div > ul > li > ul > li > ul > li {}
 
 }
+
+/* custome_part_qwe */
+
+.box_shadow_qwe{box-shadow:1px 1px 12px #000;}
+.box_shadow_qwe a:hoer{box-shadow:0px 0px 0px #000,0px 0px 0px #000;}
+
     </style>
     <?php
 }

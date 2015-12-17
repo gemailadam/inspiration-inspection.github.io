@@ -13,23 +13,10 @@ header("Content-Disposition:attachment;filename=downloaded.pdf");
 // The PDF source is in original.pdf
 readfile("original.pdf");
 */?>
-<!DOCTYPE html>
-<!--[if IE 7]>
-<html class="ie ie7" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if !(IE 7) & !(IE 8)]><!-->
-<html <?php language_attributes(); ?> >
-<!--<![endif]-->
-<head>
-
-		<?php // wp_head(); ?>
 
 		<?php get_template_part('page-templates/head_html'); ?>
 
-</head>
+
 <body <?php body_class( ); ?> >
 <div class="container">
 
@@ -81,7 +68,7 @@ readfile("original.pdf");
 	</div>
 	<!-- End Container-->
 
-		<?php get_template_part('/page-templates/script'); ?>
+		<?php get_template_part('page-templates/script'); ?>
 
 </body>
 </html>

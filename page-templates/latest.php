@@ -1,20 +1,18 @@
 <?php 
-/* single.php
-*
-* for showing the post at seperate page
-*
-* The single post template. Used when a single post
-* is queried. For this and all other query templates, 
-* index.php is used if the query template is not present. 
-*/ ?>
-<?php/*
-// Date in the past
-header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-header("Cache-Control: no-cache");
-header("Pragma: no-cache");
-*/?>
+/*
+Template Name: latest page
+*/
+ ?>
+<?php 
+/*home.php
+   The home front page template. 
+    
+*/
+   ?>
+
 
 		<?php get_template_part('page-templates/head_html'); ?>
+
 
 <body <?php body_class( ); ?> >
 	<div class="container">
@@ -23,7 +21,7 @@ header("Pragma: no-cache");
 		<header>
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<?php get_header(); ?>
+					<?php get_template_part('page-templates/home_page'); ?>
 				</div>
 			</header>
 			<!-- 2 ) main -->
@@ -32,9 +30,9 @@ header("Pragma: no-cache");
 					<!-- 2-1 ) page part -->
 					<div class="page">
 						<div class="col-lg-9 col-md-12 col-sm-12 col-xs-9">
+							
 
-
-						<?php get_template_part('page-templates/main_single'); ?>
+						<?php get_template_part('page-templates/main_page'); ?>
 
 						</div>
 					</div>
@@ -56,7 +54,7 @@ header("Pragma: no-cache");
 			<footer>
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<br/>
+						<br/>					
 						<?php get_footer(); ?>
 					</div>
 				</div>
@@ -65,10 +63,8 @@ header("Pragma: no-cache");
 			
 		</div>
 		<!-- End Container-->
-
-		<?php get_template_part('page-templates/script'); ?>
-
-
 	
+	<?php get_template_part('page-templates/script'); ?>
+
 	</body>
-	</html>     
+	</html>

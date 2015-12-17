@@ -3,10 +3,9 @@
 Template Name: slideshow
 */
 ?>
-<!Doctype html>
-<head>
+
 	<?php get_template_part('page-templates/head_html'); ?>
-</head>
+
 <body>
 <section class="site-title" >
 	<?php echo '<p><a href="'; the_permalink();echo '">'; bloginfo('title');echo '</a></p><br/>'; ?>

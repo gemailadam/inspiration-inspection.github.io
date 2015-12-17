@@ -3,21 +3,9 @@
 Template Name:sitemap
 */
 ?>
-<!DOCTYPE html>
-<!--[if IE 7]>
-<html class="ie ie7" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if !(IE 7) & !(IE 8)]><!-->
-<html <?php language_attributes(); ?> >
-<!--<![endif]-->
-<head>
-		<?php // wp_head(); ?>
 
 		<?php get_template_part('page-templates/head_html'); ?>
-</head>
+
 <body <?php body_class( ); ?> >
 <div class="container">
 
@@ -35,7 +23,8 @@ Template Name:sitemap
 			<div class="page">
 				<div class=" col-xs-12 col-lg-12 col-md-12 col-sm-12 relative">
 				<div class="wrapper">
-					<img class="sitemap"  src="<?php bloginfo('template_directory'); ?>/images/egyptfull.jpg" alt="">
+					<!--img class="sitemap"  src="<?php bloginfo('template_directory'); ?>/images/egyptfull.jpg" alt="egyptmap"-->
+					<img class="sitemap"  src="https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/egyptfull.jpg" alt="">
 					<div class="maplinks">
 						<table>
 							<tr class="row-xs-1 row-lg-1 row-md-1 row-sm-1"><td></td><td></td><td></td><td></td><td></td></tr>

@@ -4,15 +4,9 @@
  * Description: Page template without sidebar
  */
 ?>
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-	<!--script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/themes/ui-darkness/jquery-ui.css"></script-->
 
 		<?php get_template_part('page-templates/head_html'); ?>
 
-</head>
 <body <?php body_class( ); ?> >
 <div class="container">
 

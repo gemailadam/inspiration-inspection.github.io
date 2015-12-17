@@ -4,12 +4,8 @@
  * Description: Page template without sidebar
  */
 ?>
- <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
 		<?php get_template_part('page-templates/head_html'); ?>
 
-</head>
 <body <?php body_class( ); ?> >
 <div class="container">
 

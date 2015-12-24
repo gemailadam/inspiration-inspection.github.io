@@ -45,5 +45,5 @@
 							</span>  
 
 			<?php // get_template_part('/page-templates/comments.php' ); ?>
-			<?php  comments_template( '/page-templates/comments.php' ); ?> 
+			<?php  comments_template( 'page-templates/comments.php' ); ?> 
 			<?php // comment_form( ); ?> 

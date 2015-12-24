@@ -38,7 +38,7 @@ function qwe_slideshow($wp_customize)
 //slideshow images
     // for ($v=1; $v < $qwe_num_of_images ; $v++) { 
 	
-	    $wp_customize->add_setting('image1_id',array('default' => 'http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image1.jpg' ));
+	    $wp_customize->add_setting('image1_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image1.jpg' ));
 	    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image1_id',array(
 	        'label' =>'Upload Image 1',
 	        'priority'=>1,
@@ -60,7 +60,7 @@ function qwe_slideshow($wp_customize)
 		    )
 		);
 		                
-	    $wp_customize->add_setting('image2_id', array('default' => 'http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image2.jpg' ));
+	    $wp_customize->add_setting('image2_id', array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image2.jpg' ));
 	    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image2_id',array(
 	        'label' =>'Upload Image 2',
 	        'priority'=>3,
@@ -82,40 +82,40 @@ function qwe_slideshow($wp_customize)
 		    )
 		);
 		                
-	    $wp_customize->add_setting('image3_id',array('default' => 'http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image3.jpg' ));
+	    $wp_customize->add_setting('image3_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image3.jpg' ));
 	    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image3_id',array(
 	        'label' =>'Upload Image 3',
 	        'priority'=>5,
 	        'section' => 'slideshow' ,
 	        'settings' => 'image3_id' )));
 
-	    $wp_customize->add_setting('image4_id',array('default' => 'http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image4.jpg' ));
+	    $wp_customize->add_setting('image4_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image4.jpg' ));
 	    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image4_id',array(
 	        'label' =>'Upload Image 4',
 	        'priority'=>7,
 	        'section' => 'slideshow' ,
 	        'settings' => 'image4_id' )));
 
-	    $wp_customize->add_setting('image5_id',array('default' => 'http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image5.jpg' ));
+	    $wp_customize->add_setting('image5_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image5.jpg' ));
 	    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image5_id',array(
 	        'label' =>'Upload Image 5',
 	        'priority'=>9,
 	        'section' => 'slideshow' ,
 	        'settings' => 'image5_id' )));
 
-	    $wp_customize->add_setting('image6_id',array('default' => 'http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image6.jpg' ));
+	    $wp_customize->add_setting('image6_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image6.jpg' ));
 	    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image6_id',array(
 	        'label' =>'Upload Image 6',
 	        'section' => 'slideshow' ,
 	        'settings' => 'image6_id' )));
 
-	    $wp_customize->add_setting('image7_id',array('default' => 'http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image7.jpg' ));
+	    $wp_customize->add_setting('image7_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image7.jpg' ));
 	    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image7_id',array(
 	        'label' =>'Upload Image 7',
 	        'section' => 'slideshow' ,
 	        'settings' => 'image7_id' )));
 
-	    $wp_customize->add_setting('image8_id',array('default' => 'http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image8.jpg' ));
+	    $wp_customize->add_setting('image8_id',array('default' => 'https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image8.jpg' ));
 	    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'image8_id',array(
 	        'label' =>'Upload Image 8',
 	        'section' => 'slideshow' ,

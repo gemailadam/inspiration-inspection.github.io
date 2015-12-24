@@ -55,6 +55,12 @@
             .fadeIn(1000)
             .prependTo(".galleryPreviewImage");
 
+            $('.gallerydescription > div:first-child')
+            .fadeOut(1000);
+            $('.gallerydescription > div:last-child')
+            .fadeIn(1000)
+            .prependTo(".gallerydescription");
+
             nextSlideTimer = setInterval(nextSlide, 9000)
             setTimeout(nextSlideTimer, 9000)
 
@@ -77,6 +83,14 @@
             .fadeIn(1000)
             .end()
             .appendTo(".galleryPreviewImage");
+
+            $('.gallerydescription > div:first-child')
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo(".gallerydescription");
+        
 
             nextSlideTimer = setInterval(nextSlide, 9000)
             setTimeout(nextSlideTimer, 9000)

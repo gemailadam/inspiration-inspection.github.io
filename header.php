@@ -1,6 +1,6 @@
 <section class="site-title" >
 	<?php echo '<p><a href="'; the_permalink();echo '">'; bloginfo('title');echo '</a></p><br/>'; ?>
-	<?php echo '<a href="'; the_permalink();echo '">'; bloginfo('description');echo '</a>'; ?>
+	<?php echo '<span class="title-description"><a href="'; the_permalink();echo '">'; bloginfo('description');echo '</a></span>'; ?>
 
 </section>
 <br/>
@@ -10,7 +10,7 @@
 			<?php 
 			    //total number of images you will add to slideshow
 				$imageTotal=8;
-				$description[1]='some description text 1 ';
+				$description[1]='First article about 3DaVinci Portfolio theme designed for WordPress , its compleatly free with GPL v2 licences for more information click the button';
 				$description[2]='some description text 2 ';
 				$description[3]='some description text 3 ';
 				$description[4]='some description text 4 ';
@@ -77,13 +77,13 @@
 			 			 //}
 
 			 			echo '<img class="previewImage1" src="';echo get_theme_mod('image1_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image1.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage2" src="';echo get_theme_mod('image2_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image2.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage3" src="';echo get_theme_mod('image3_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image3.gif');echo '" alt=""/>';
-			 			echo '<img class="previewImage4" src="';echo get_theme_mod('image4_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image4.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage5" src="';echo get_theme_mod('image5_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image5.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage6" src="';echo get_theme_mod('image6_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image6.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage7" src="';echo get_theme_mod('image7_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image7.jpg');echo '" alt=""/>';
-			 			echo '<img class="previewImage8" src="';echo get_theme_mod('image8_id','http://localhost/dashboard/wordpress/wp-content/themes/3DaVinci/images/image8.jpg');echo '" alt=""/>';
+			 			echo '<img class="previewImage2" src="';echo get_theme_mod('image2_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image2.jpg');echo '" alt=""/>';
+			 			echo '<img class="previewImage3" src="';echo get_theme_mod('image3_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image3.jpg');echo '" alt=""/>';
+			 			echo '<img class="previewImage4" src="';echo get_theme_mod('image4_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image4.jpg');echo '" alt=""/>';
+			 			echo '<img class="previewImage5" src="';echo get_theme_mod('image5_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image5.jpg');echo '" alt=""/>';
+			 			echo '<img class="previewImage6" src="';echo get_theme_mod('image6_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image6.jpg');echo '" alt=""/>';
+			 			echo '<img class="previewImage7" src="';echo get_theme_mod('image7_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image7.jpg');echo '" alt=""/>';
+			 			echo '<img class="previewImage8" src="';echo get_theme_mod('image8_id','https://raw.githubusercontent.com/gemailadam/inspiration-inspection.github.io/master/images/image8.jpg');echo '" alt=""/>';
 
 			 			 ?>
 			 		</div>

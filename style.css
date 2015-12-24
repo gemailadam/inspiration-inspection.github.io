@@ -71,7 +71,14 @@
 /* from    https://css-tricks.com/snippets/css/clear-fix/ */
 
 
+.table {box-shadow:inset 2px 2px 8px #000;padding: 5px 10px;width:70%;border: 0px solid #777;}
+.table textarea {box-shadow:inset 2px 2px 4px #000;padding: 5px 10px;color:#222;}
+.table input {box-shadow:inset 2px 2px 4px #000;padding: 5px 10px;color: #222;}
+.table label {box-shadow:inset 2px 2px 4px #000;padding: 5px 10px;color: #222;}
+.qwe_form {margin-left: 20px;}
+@media (max-width: 400px){
+.qwe-table {box-shadow:inset 2px 2px 8px #000;padding: 5px 10px;width:80%;border-radius: 10px;border: 0px solid #777;}
 
-
+}
 
 

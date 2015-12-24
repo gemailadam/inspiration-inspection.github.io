@@ -10,7 +10,7 @@
 			<?php 
 			    //total number of images you will add to slideshow
 				$imageTotal=8;
-				$description[1]='some description text 1 ';
+				$description[1]='First article about 3DaVinci Portfolio theme designed for WordPress , its compleatly free with GPL v2 licences for more information click the button';
 				$description[2]='some description text 2 ';
 				$description[3]='some description text 3 ';
 				$description[4]='some description text 4 ';
@@ -146,7 +146,7 @@
 </section>
 <br/>
 <br/>
-<section class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
+<section class="sectionthumb col-xs-12 col-lg-12 col-md-12 col-sm-12">
 	
 			 	<div class="gallerythumContainer">
 			 			<?php 

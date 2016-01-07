@@ -15,6 +15,11 @@ The 404 Not Found template. Used when WordPress cannot find a post or page that 
 <html <?php language_attributes(); ?> >
 <!--<![endif]-->
 <head>
+
+<?php 
+echo '<meta http-equiv="refresh" content="10;url=';echo get_home_url();echo '" />';
+ ?>
+
 		<?php get_template_part('page-templates/head_html'); ?>
 
 </head>
@@ -32,7 +37,9 @@ The 404 Not Found template. Used when WordPress cannot find a post or page that 
 			<div class="oops">
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<h1>Oops The Page You Request Is not Found , You have been redirected To Home Page</h1> 
+						<!-- yon add a function to get user searched page to redirect to google with the same name -->
+						<h1>Oops The Page You Request Is not Found , You will be redirected To Home Page after 5 secands , or click google button to search for this missing page at google cache</h1> 
+						<a href="http://www.google.com/"><button style="color:#fff;background:orange;width:100px;height:50px;padding:10px;margin:10px;box-shadow:4px 4px 8px #000;">Google</button></a>
 					</div>
 				</div>
 			</div>   
@@ -44,14 +51,10 @@ The 404 Not Found template. Used when WordPress cannot find a post or page that 
 						<div class="col-xs-9 col-lg-9 col-md-12 col-sm-12">
 							
 							<div class="rect">
-								<h1 style="color:#2288BD;"><u>HOME</u></h1>
+								<!-- <h1 style="color:#2288BD;"><u>HOME</u></h1> -->
 
 
-								<h1>Under Construction</h1>
-
-								<p>Under Construction , Under Construction , Under Construction Under Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under ConstructionUnder Construction , Under Construction , Under Construction
-								</p>
-				<?php get_template_part('page-templates/main_index'); ?>
+									<?php //get_template_part('page-templates/main_index'); ?>
 								
 							</div>	
 

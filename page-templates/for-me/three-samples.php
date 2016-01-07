@@ -1,29 +1,21 @@
 <?php 
-/*page.php
-   The page template. 
-   Used when an individual Page is queried. 
+/*
+Template Name: 3 samples links
 */
-   ?>
-<?php/*
-// Date in the past
-header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-header("Cache-Control: no-cache");
-header("Pragma: no-cache");
-*/?>
-
+ ?>
 
 		<?php get_template_part('page-templates/head_html'); ?>
 
 
-<body <?php body_class(); ?> >
-<div class="container">
+<body <?php body_class( ); ?> >
+<div class="container ">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 		<!-- 1) header-->
 		<header>
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<?php get_header(); ?>
+					<?php get_template_part('home_page'); ?>
 				</div>
 			</header>
 			<!-- 2 ) main -->
@@ -62,7 +54,7 @@ header("Pragma: no-cache");
 				</div>
 			</footer>
 			<!-- End footer-->
-	</div>			
+</div>			
 </div>
 <!-- End Container-->
 	

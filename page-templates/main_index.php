@@ -1,10 +1,12 @@
 	<?php
 					if(have_posts()) {
 
-
 					while ( have_posts() ) { 
 
 					the_post();
+?>
+<div id="post-<?php the_ID(); ?>" <?php post_class( 'class-adam' ); ?>>
+<?php
 					echo '<div class="rect">';
 					echo '<h1><a href="';
 					the_permalink();	
@@ -20,19 +22,19 @@
 					echo '<div class="postedby">';
 					echo '<a href="';
 					the_author_link();
-					echo '">';
+					echo '">By : ';
 					the_author();
 					echo "</a>";
 					echo '<a href="';
 					the_permalink();	
-					echo '">';
+					echo '">Posted on : ';
 					the_date('F Y');
 					echo '</a>';
-					
 					the_category();
-					
 					echo '<br/>';
 					echo '</div>';
+
+					echo '</div>';//post-id and post-class
 
 					}
 					}else { echo "No Content Found , or there is nothing posted By you yet";}					            

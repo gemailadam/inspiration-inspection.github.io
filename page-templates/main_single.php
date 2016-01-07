@@ -1,7 +1,9 @@
 							<?php
 							if(have_posts()) : 
 								while ( have_posts() ) : the_post();
-							
+?>
+<div id="post-<?php the_ID(); ?>" <?php post_class( 'class-adam' ); ?>>
+<?php							
 							echo '<div class="rect">';
 							echo '<h1><a>';
 							the_title();
@@ -26,6 +28,8 @@
 							echo '<br/>';
 
 							echo '</div>';
+							
+							echo '</div>';//post-id and post-class
 
 
 							endwhile;
@@ -45,5 +49,5 @@
 							</span>  
 
 			<?php // get_template_part('/page-templates/comments.php' ); ?>
-			<?php  comments_template( 'page-templates/comments.php' ); ?> 
-			<?php // comment_form( ); ?> 
+			<?php // comments_template( 'page-templates/comments.php' ); ?> 
+			<?php comment_form( ); ?> 

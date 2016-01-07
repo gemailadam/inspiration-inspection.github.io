@@ -1,4 +1,13 @@
 <?php 
+/*
+
+1- sidebare
+2- footer
+3- nav_menu
+4- banner
+
+*/
+
 /* register widgets for sidebare*/
 
 /////////////////////////////////////////////
@@ -94,8 +103,6 @@ function qwe_register_nav_menu(){
 
 }
 add_action('after_setup_theme','qwe_register_nav_menu' );
-
-
 
 
  ?>

@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: 3 column 2 Sidebar
+ * Template Name: 3 column no slideshow
  * Description: Page template without sidebar
  */
 ?>
@@ -10,13 +10,31 @@
 <body <?php body_class( ); ?> >
 <div class="container">
 
-	<!-- 1) header-->
-	<header>
-		<div class="row">
-			<div class=" col-xs-12 col-lg-12 col-md-12 col-sm-12">
-                 <?php get_header(); ?>
-            </div>
-    </header>
+		<!-- 1) header-->
+		<header>
+				<div class="row">
+					<div class=" col-xs-12 col-lg-12 col-md-12 col-sm-12">
+
+						<section class="site-title" >
+							<?php echo '<p><a href="'; the_permalink();echo '">'; bloginfo('title');echo '</a></p><br/>'; ?>
+							<?php echo '<a href="'; the_permalink();echo '">'; bloginfo('description');echo '</a>'; ?>
+
+						</section>
+						<br/>
+
+						<section class="banner col-xs-12 col-lg-12 col-md-12 col-sm-12" >
+	                    	<?php dynamic_sidebar('banner'); ?>
+						</section>
+						<br/>
+
+						<section class="nav" >
+							<nav ><?php wp_nav_menu(array('theme_location'=>'Primary') ); ?></nav>
+						</section>
+						<br/>
+						<br/>
+
+					</div>
+		</header>
 		<!-- 2 ) main -->
 		<div class="main">
 		<div class="row">

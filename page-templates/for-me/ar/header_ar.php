@@ -1,11 +1,11 @@
-<section class="site-title" >
+<section class="site-title-ar" >
 	<?php echo '<p><a href="'; the_permalink();echo '">'; bloginfo('title');echo '</a></p><br/>'; ?>
 	<?php echo '<span class="title-description"><a href="'; the_permalink();echo '">'; bloginfo('description');echo '</a></span>'; ?>
 
 </section>
 <br/>
 
-<section class="banner" >
+<section class="banner-ar" >
 
 			<?php 
 			    //total number of images you will add to slideshow
@@ -99,7 +99,7 @@
 			 			<a href="#" class="nextslidearrow row-static-1">&gt;</a>
 			 		</div>
 			 	</div>
-				<div class="gallerydescription">
+				<div class="gallerydescription-ar">
 					<?php 
 						// for ($x=1; $x <=$imageTotal ; $x++) { 
 							//echo '<div class="description'.$x.'"><a>'.$description[$x].'</a><br/><input type="submit" name="button'.$x.'" value="';
@@ -139,7 +139,7 @@ echo '<div class="description8"><div class="desbg"><a href="';echo get_theme_mod
   <area class="circbarrow" shape="poly" coords="0,0,0,1500,75,75" href="venus.htm" alt="Venus">
 </map> 
 <br/>
-<section class="nav" >
+<section class="nav-ar" >
 	<nav ><?php wp_nav_menu(array('theme_location'=>'Primary') ); ?></nav>
 </section>
 <br/>

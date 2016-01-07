@@ -1,15 +1,7 @@
 <?php 
 /*
-Template Name: home page
 */
  ?>
-<?php 
-/*home.php
-   The home front page template. 
-    
-*/
-   ?>
-
 
 		<?php get_template_part('page-templates/head_html'); ?>
 
@@ -22,7 +14,7 @@ Template Name: home page
 		<header>
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<?php get_template_part('page-templates/home_page'); ?>
+					<?php get_template_part('home_page'); ?>
 				</div>
 			</header>
 			<!-- 2 ) main -->

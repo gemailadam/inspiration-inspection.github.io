@@ -1,7 +1,7 @@
 
 <?php
 /*
- * Template Name: 2 column no slideshow
+ * Template Name:  1 column no slideshow
  * Description: Page template without sidebar
  */
 ?>
@@ -42,7 +42,7 @@
 
 						<!-- 2-1 ) page part -->
 						<div class="page">
-							<div class=" col-xs-9 col-lg-9 col-md-12 col-sm-12 ">
+							<div class=" col-xs-12 col-lg-12 col-md-12 col-sm-12 ">
 
 								<?php get_template_part('page-templates/main_page'); ?>
 
@@ -50,14 +50,6 @@
 						</div>
 						<!-- end page part -->   
 
-						<!-- 2-3 ) right sidebar  -->
-						<div class="sidebar">
-							<div class=" col-xs-3 col-lg-3 col-md-12 col-sm-12 ">
-								<?php get_sidebar(); ?>
-								<br/>
-							</div>
-						</div>
-						<!-- end right sidebar part -->
 
 					</div>
 					<!--End Row -->
